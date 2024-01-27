@@ -5,36 +5,51 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] public float points;
-    [SerializeField] public GameObject Npc0;
-    [SerializeField] public GameObject Npc1;
-    [SerializeField] public GameObject Npc2;
-
+    [SerializeField] public GameObject[] Npc;
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] bool spawnonce;
     BackgroundScrolling backgroundManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        backgroundManager = BackgroundScrolling.singletonInstance;   
+        backgroundManager = BackgroundScrolling.singletonInstance;
+        spawnonce = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(points == 0)
+        switch(points)
         {
-            Npc0.SetActive(true);
-        }
-        else
-        {
-            Npc0.SetActive(false);
-        }
-        if(points == 1)
-        {
-            Npc1.SetActive(true);
-        }
-        if(points == 2)
-        {
-            Npc2.SetActive(true);
+            case 0:
+                if(spawnonce)
+                {
+                    Instantiate(Npc[0], spawnPoint);
+                    spawnonce = false;
+                }
+                break;
+            case 1:
+                if (spawnonce)
+                {
+                    Instantiate(Npc[1], spawnPoint);
+                    spawnonce = false;
+                }
+                break;
+            case 2:
+                if (spawnonce)
+                {
+                    Instantiate(Npc[2], spawnPoint);
+                    spawnonce = false;
+                }
+                break;
+            default:
+                if (spawnonce)
+                {
+                    Instantiate(Npc[0], spawnPoint);
+                    spawnonce = false;
+                }
+                break;
         }
     }
 
