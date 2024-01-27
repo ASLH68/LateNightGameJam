@@ -2,17 +2,17 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Controls",
+            "name": "Gameplay",
             "id": "a0857d5e-5dd2-4e4e-b28a-d2c9d2657c3e",
             "actions": [
                 {
-                    "name": "Move",
-                    "type": "Button",
+                    "name": "Right",
+                    "type": "Value",
                     "id": "99b868cb-5706-472b-a1e5-c6ab42645d48",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Interact",
@@ -22,20 +22,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Left",
+                    "type": "Value",
+                    "id": "85d29cf0-3562-4e52-905f-3d7123250bb5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "bee45d85-345b-496d-989e-48254f06dc0c",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "f4d2df53-3349-4a75-9473-9f23e55a0de3",
@@ -43,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -55,6 +53,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10a737b6-8bbf-4f61-98bf-94c97a096d07",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
