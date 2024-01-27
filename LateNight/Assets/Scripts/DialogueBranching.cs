@@ -7,12 +7,12 @@ using TMPro;
 
 public class DialogueBranching : MonoBehaviour
 {
+    [SerializeField] int vulnerableOption;
     [SerializeField] int closingDialogueThreshold;
     [SerializeField] string[] npcDialogue;
     [SerializeField] string[] playerResponses;
 
     PlayerControls playerInputs;
-    InputAction interact;
 
     static GameObject interactPrompt;
     static TextMeshProUGUI dialogueText;
@@ -22,11 +22,12 @@ public class DialogueBranching : MonoBehaviour
     static GameObject rightButton;
     static GameObject dialogueBox;
 
+    ButtonManager manager;
+
     // static PlayerController playerScript;
 
     int npcDialogueIndex = 0;
 
-    public bool pressingE = false;
     bool canInteract = false;
     bool isInteracting = false;
     bool isDoneTalking = false;
@@ -35,6 +36,7 @@ public class DialogueBranching : MonoBehaviour
     {
         playerInputs = new PlayerControls();
         playerInputs.Controls.Enable();
+        manager = ButtonManager.staticInstance;
 
         if (interactPrompt == null)
         {
@@ -70,8 +72,9 @@ public class DialogueBranching : MonoBehaviour
     {
         if (canInteract && !isInteracting && playerInputs.Controls.Interact.triggered == true)
         {
-            Debug.Log("INput recieved");
             // TODO disable movement
+
+            manager.UpdateCurrentNPC(this);
 
             isInteracting = true;
 
@@ -105,18 +108,24 @@ public class DialogueBranching : MonoBehaviour
 
     public void GetResponse(int buttonChoice)
     {
+        leftButton.SetActive(false);
+        rightButton.SetActive(false);
+
         if (isDoneTalking)
         {
             dialogueBox.SetActive(false);
+
             return;
         }
-
-        leftButton.SetActive(false);
-        rightButton.SetActive(false);
 
         if (buttonChoice != -1)
         {
             npcDialogueIndex += npcDialogueIndex + (buttonChoice + 1);
+
+            if (npcDialogueIndex == vulnerableOption)
+            {
+                // TODO increment vulnerable choices
+            }
 
             if (npcDialogueIndex >= closingDialogueThreshold)
             {
