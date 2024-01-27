@@ -86,6 +86,12 @@ public class DialogueBranching : MonoBehaviour
 
             GetResponse(-1);
         }
+
+        if(wasVulnerable)
+        {
+            Debug.Log("Lo siento");
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
