@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,9 +9,9 @@ public class MainMenu : MonoBehaviour
 {
     private PlayerInput _controls;
 
-    private GameObject _currentPanel;
-    [SerializeField] private GameObject _controlPanel;
-    [SerializeField] private GameObject _creditPanel;
+    [SerializeField] private GameObject _settings;
+    [SerializeField] private GameObject _title;
+    [SerializeField] private GameObject _quitPromptDisplay;
 
     public enum Panel
     {
@@ -30,8 +31,9 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        _controls.currentActionMap.FindAction("Back").started += DisablePanels;
-        DisablePanels();
+        _controls.currentActionMap.FindAction("Back").started += DisplayPrompt;
+        _settings.SetActive(false);
+        _quitPromptDisplay.SetActive(false);
     }
 
     /// <summary>
@@ -43,45 +45,44 @@ public class MainMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// Switches panel to the one pressed
+    /// Opens the settings
     /// </summary>
-    /// <param name="panel"></param>
-    public void SwitchPanel(GameObject panel)
+    /// <param name="val"></param>
+    public void OpenSettings()
     {
-        _currentPanel?.SetActive(false);
-        panel.SetActive(true);
-        _currentPanel = panel;
+        var val = _settings.activeInHierarchy;
+        _settings.SetActive(!val);
+        _title.SetActive(val);
+    }
+
+    #region Quit Game
+    /// <summary>
+    /// Displays the quit prompt from the input action
+    /// </summary>
+    /// <param name="obj"></param>
+    private void DisplayPrompt(InputAction.CallbackContext obj)
+    {
+        var val = _quitPromptDisplay.activeInHierarchy;
+        _quitPromptDisplay?.SetActive(!val);
+        _title.SetActive(val);
     }
 
     /// <summary>
-    /// Closes the game
+    /// Displays the quit prompt 
     /// </summary>
-    public void QuitGame()
+    public void DisplayPrompt()
+    {
+        var val = _quitPromptDisplay.activeInHierarchy;
+        _quitPromptDisplay?.SetActive(!val);
+        _title.SetActive(val);
+    }
+
+    // Quits the application
+    public void ConfirmQuit()
     {
         Application.Quit();
     }
-
-    /// <summary>
-    /// Returns to the main page
-    /// </summary>
-    public void Back()
-    {
-        _currentPanel?.SetActive(false);
-    }
-
-    /// <summary>
-    /// Disables panels
-    /// </summary>
-    public void DisablePanels(InputAction.CallbackContext obj)
-    {
-        DisablePanels();
-    }
-
-    private void DisablePanels()
-    {
-        _controlPanel?.SetActive(false);
-        _creditPanel?.SetActive(false);
-    }
+    #endregion
 
     private void OnDisable()
     {
