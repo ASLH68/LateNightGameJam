@@ -1167,15 +1167,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851833013}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc339fb21399c5b4897211858f2ba344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vulnerableNPCs:
-  - {fileID: 0}
+  - {fileID: 3367047142732560749, guid: 0bfc7fa2846501a4ca1a596314ee1ccf, type: 3}
+  - {fileID: 1416639452303281181, guid: 944bb086f705b30438041ad75d1086d3, type: 3}
   genericNPCs:
-  - {fileID: 0}
+  - {fileID: 5322303687116341752, guid: d98c5c58e9edddf49b8815b65ae5a562, type: 3}
+  spawnPoint: {fileID: 1355341530}
 --- !u!1001 &902783853
 PrefabInstance:
   m_ObjectHideFlags: 0

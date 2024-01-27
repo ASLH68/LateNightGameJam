@@ -6,6 +6,7 @@ public class NPCSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] vulnerableNPCs;
     [SerializeField] GameObject[] genericNPCs;
+    [SerializeField] Transform spawnPoint;
 
     GameController gc;
     int nextPointThreshold = 1;
@@ -18,22 +19,19 @@ public class NPCSpawner : MonoBehaviour
 
     public void SpawnNewNPC(float spawnLocation)
     {
-        GameObject temp;
+        spawnPoint.position = new Vector2(spawnLocation, spawnPoint.position.y);
 
         if (gc.points >= nextPointThreshold)
         {
-            temp = vulnerableNPCs[nextPointThreshold - 1];
+            Instantiate(vulnerableNPCs[nextPointThreshold - 1], spawnPoint);
 
             nextPointThreshold++;
         }
         else
         {
-            temp = genericNPCs[genericNPCIndex];
+            Instantiate(genericNPCs[genericNPCIndex], spawnPoint);
 
             genericNPCIndex++;
         }
-
-        temp.transform.position = new Vector2(spawnLocation, 3);
-        temp.SetActive(true);
     }
 }
