@@ -23,20 +23,24 @@ public class DialogueBranching : MonoBehaviour
     static GameObject dialogueBox;
 
     ButtonManager manager;
+    GameController gc;
 
-    // static PlayerController playerScript;
+    static PlayerBehavior playerScript;
 
     int npcDialogueIndex = 0;
 
     bool canInteract = false;
     bool isInteracting = false;
     bool isDoneTalking = false;
+    bool wasVulnerable = false;
 
     private void Awake()
     {
         playerInputs = new PlayerControls();
         playerInputs.Gameplay.Enable();
         manager = ButtonManager.staticInstance;
+        playerScript = FindObjectOfType<PlayerBehavior>();
+        gc = FindObjectOfType<GameController>();
 
         if (interactPrompt == null)
         {
@@ -64,15 +68,13 @@ public class DialogueBranching : MonoBehaviour
             rightButtonText = rightButton.transform.GetChild(0).gameObject.GetComponent<Text>();
             rightButton.SetActive(false);
         }
-
-        // TODO check and set playerController
     }
 
     private void Update()
     {
         if (canInteract && !isInteracting && playerInputs.Gameplay.Interact.triggered == true)
         {
-            // TODO disable movement
+            playerScript.control.Disable();
 
             manager.UpdateCurrentNPC(this);
 
@@ -115,6 +117,13 @@ public class DialogueBranching : MonoBehaviour
         {
             dialogueBox.SetActive(false);
 
+            playerScript.control.Enable();
+
+            if (!wasVulnerable)
+            {
+                gc.passivedialogueoption();
+            }
+
             return;
         }
 
@@ -124,7 +133,7 @@ public class DialogueBranching : MonoBehaviour
 
             if (npcDialogueIndex == vulnerableOption)
             {
-                // TODO increment vulnerable choices
+                gc.personaldialogueoption();
             }
 
             if (npcDialogueIndex >= closingDialogueThreshold)
