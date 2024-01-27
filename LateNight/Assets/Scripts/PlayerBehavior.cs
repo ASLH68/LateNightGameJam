@@ -20,6 +20,12 @@ public class PlayerBehavior : MonoBehaviour
         control.Gameplay.Left.performed += ctx => holdingLeft = true;
         control.Gameplay.Left.canceled += ctx => holdingLeft = false;
 
+        
+    }
+
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -41,9 +47,9 @@ public class PlayerBehavior : MonoBehaviour
             transform.Translate(moveVelocity, Space.Self);
         }
         
+
         
     }
-
     private void OnEnable()
     {
         control.Gameplay.Enable();
