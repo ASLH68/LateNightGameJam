@@ -53,6 +53,11 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void spawnanother()
+    {
+        spawnonce = true;
+    }
+
     public void passivedialogueoption()
     {
         points += 1;
