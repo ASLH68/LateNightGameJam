@@ -23,13 +23,13 @@ public class NPCSpawner : MonoBehaviour
 
         if (gc.points >= nextPointThreshold)
         {
-            Instantiate(vulnerableNPCs[nextPointThreshold - 1], spawnPoint);
+            Instantiate(vulnerableNPCs[nextPointThreshold - 1], spawnPoint.position, spawnPoint.rotation);
 
             nextPointThreshold++;
         }
         else
         {
-            Instantiate(genericNPCs[genericNPCIndex], spawnPoint);
+            Instantiate(genericNPCs[genericNPCIndex], spawnPoint.position, spawnPoint.rotation);
 
             genericNPCIndex++;
         }
