@@ -6,6 +6,8 @@ public class BackgroundScrolling : MonoBehaviour
 {
     public static BackgroundScrolling singletonInstance;
 
+    NPCSpawner spawner;
+
     Queue<Background> backgroundQueue = new Queue<Background>();
 
     // 0 = city, 1 = park, 2 = trolley
@@ -25,6 +27,8 @@ public class BackgroundScrolling : MonoBehaviour
     private void Awake()
     {
         singletonInstance = this;
+
+        spawner = FindObjectOfType<NPCSpawner>();
 
         foreach (Background city in cityBackgrounds)
         {
@@ -82,7 +86,9 @@ public class BackgroundScrolling : MonoBehaviour
         }
             
         backgroundQueue.Enqueue(temp);
-        
+
+        spawner.SpawnNewNPC(currentXPos);
+
         temp.ChangeLocation(new Vector2(currentXPos, 3));
         currentXPos += changeInX;
     }
