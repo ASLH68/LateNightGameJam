@@ -35,7 +35,7 @@ public class DialogueBranching : MonoBehaviour
     private void Awake()
     {
         playerInputs = new PlayerControls();
-        playerInputs.Controls.Enable();
+        playerInputs.Gameplay.Enable();
         manager = ButtonManager.staticInstance;
 
         if (interactPrompt == null)
@@ -70,7 +70,7 @@ public class DialogueBranching : MonoBehaviour
 
     private void Update()
     {
-        if (canInteract && !isInteracting && playerInputs.Controls.Interact.triggered == true)
+        if (canInteract && !isInteracting && playerInputs.Gameplay.Interact.triggered == true)
         {
             // TODO disable movement
 
