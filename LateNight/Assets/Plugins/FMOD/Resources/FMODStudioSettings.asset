@@ -535,8 +535,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../../../../Documents/FMOD Studio/Projects/LateNiteGameJam/LateNiteGameJam.fspro
-  sourceBankPath: ../../../../../../Documents/FMOD Studio/Projects/LateNiteGameJam/Build
+  sourceProjectPath: Assets/Sound/LateNiteGameJamAudio/LateNiteGameJam.fspro
+  sourceBankPath: Assets/Sound/LateNiteGameJamAudio/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
