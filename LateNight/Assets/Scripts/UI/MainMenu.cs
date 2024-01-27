@@ -62,6 +62,7 @@ public class MainMenu : MonoBehaviour
     /// <param name="obj"></param>
     private void DisplayPrompt(InputAction.CallbackContext obj)
     {
+        _settings.SetActive(false);
         var val = _quitPromptDisplay.activeInHierarchy;
         _quitPromptDisplay?.SetActive(!val);
         _title.SetActive(val);
@@ -72,6 +73,7 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void DisplayPrompt()
     {
+        _settings.SetActive(false);
         var val = _quitPromptDisplay.activeInHierarchy;
         _quitPromptDisplay?.SetActive(!val);
         _title.SetActive(val);
