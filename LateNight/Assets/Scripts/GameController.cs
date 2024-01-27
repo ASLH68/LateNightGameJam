@@ -65,7 +65,7 @@ public class GameController : MonoBehaviour
     }
     public void personaldialogueoption()
     {
-        points += 2;
+        points += 1;
         backgroundManager.UpdateCounters(true);
     }
 }
