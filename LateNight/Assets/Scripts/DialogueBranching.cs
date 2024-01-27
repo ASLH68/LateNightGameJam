@@ -7,7 +7,7 @@ using TMPro;
 
 public class DialogueBranching : MonoBehaviour
 {
-    [SerializeField] int vulnerableOption;
+    [SerializeField] int[] vulnerableOption;
     [SerializeField] int closingDialogueThreshold;
     [SerializeField] string[] npcDialogue;
     [SerializeField] string[] playerResponses;
@@ -131,10 +131,15 @@ public class DialogueBranching : MonoBehaviour
         {
             npcDialogueIndex += npcDialogueIndex + (buttonChoice + 1);
 
-            if (npcDialogueIndex == vulnerableOption)
+            foreach (int vulner in vulnerableOption)
             {
-                gc.personaldialogueoption();
+                if (npcDialogueIndex == vulner)
+                {
+                    gc.personaldialogueoption();
+                    wasVulnerable = true;
+                }
             }
+            
 
             if (npcDialogueIndex >= closingDialogueThreshold)
             {
