@@ -12,7 +12,7 @@ public class BackgroundScrolling : MonoBehaviour
 
     // 0 = city, 1 = park, 2 = trolley
     int currentStage = 0;
-    int[,] levelThresholds = { { 6, 2 }, { 3, 1 }, { 3, 1 } };
+    int[,] levelThresholds = { { 3, 1 }, { 3, 1 }, { 2, 1 } };
     int vulnerableOptions = 0;
     int peopleInteractedWith = 0;
 
@@ -20,6 +20,7 @@ public class BackgroundScrolling : MonoBehaviour
     [SerializeField] List<Background> parkBackgrounds;
     [SerializeField] Background trolleyBackground;
     [SerializeField] GameObject foregroundObject;
+    [SerializeField] GameObject trolleyDoor;
 
     float currentXPos = 50f;
     float changeInX = 25f;
@@ -33,6 +34,18 @@ public class BackgroundScrolling : MonoBehaviour
         foreach (Background city in cityBackgrounds)
         {
             backgroundQueue.Enqueue(city);
+        }
+    }
+
+    private void Update()
+    {
+        if (currentStage == 2)
+        {
+            if (levelThresholds[currentStage, 0] <= peopleInteractedWith || levelThresholds[currentStage, 1] <= vulnerableOptions)
+            {
+                currentStage++;
+                trolleyDoor.SetActive(true);
+            }
         }
     }
 

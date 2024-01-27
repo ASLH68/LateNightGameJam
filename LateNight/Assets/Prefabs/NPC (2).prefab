@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vulnerableOption: 
-  closingDialogueThreshold: 0
+  vulnerableOption: 000000000000000000000000
+  closingDialogueThreshold: 3
   npcDialogue:
   - good day
   - good day
