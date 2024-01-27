@@ -87,10 +87,10 @@ public class BackgroundScrolling : MonoBehaviour
             
         backgroundQueue.Enqueue(temp);
 
-        //spawner.SpawnNewNPC(currentXPos);
-        GameObject gcObject = GameObject.Find("GameController");
-        GameController gc = gcObject.GetComponent<GameController>();
-        gc.spawnanother();
+        spawner.SpawnNewNPC(currentXPos);
+        //GameObject gcObject = GameObject.Find("GameController");
+        //GameController gc = gcObject.GetComponent<GameController>();
+        //gc.spawnanother();
 
         temp.ChangeLocation(new Vector2(currentXPos, 3));
         currentXPos += changeInX;
