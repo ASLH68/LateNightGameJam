@@ -34,7 +34,7 @@ public class DialogueBranching : MonoBehaviour
     bool isDoneTalking = false;
     bool wasVulnerable = false;
 
-    private void Awake()
+    private void Start()
     {
         playerInputs = new PlayerControls();
         playerInputs.Gameplay.Enable();
