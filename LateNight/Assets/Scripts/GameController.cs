@@ -9,10 +9,12 @@ public class GameController : MonoBehaviour
     [SerializeField] public GameObject Npc1;
     [SerializeField] public GameObject Npc2;
 
+    BackgroundScrolling backgroundManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        backgroundManager = BackgroundScrolling.singletonInstance;   
     }
 
     // Update is called once per frame
@@ -39,9 +41,11 @@ public class GameController : MonoBehaviour
     public void passivedialogueoption()
     {
         points += 1;
+        backgroundManager.UpdateCounters(false);
     }
     public void personaldialogueoption()
     {
         points += 2;
+        backgroundManager.UpdateCounters(true);
     }
 }
