@@ -17,6 +17,9 @@ public class BackgroundScrolling : MonoBehaviour
     int vulnerableOptions = 0;
     int peopleInteractedWith = 0;
 
+    [SerializeField] AudioSource ambience;
+    [SerializeField] AudioClip[] ambientSources;
+
     [SerializeField] List<Background> cityBackgrounds;
     [SerializeField] List<Background> parkBackgrounds;
     [SerializeField] Background trolleyBackground;
@@ -31,6 +34,8 @@ public class BackgroundScrolling : MonoBehaviour
     private void Awake()
     {
         singletonInstance = this;
+
+        ambience.clip = ambientSources[0];
 
         spawner = FindObjectOfType<NPCSpawner>();
 
@@ -80,6 +85,8 @@ public class BackgroundScrolling : MonoBehaviour
 
             if (currentStage == 1)
             {
+                ambience.clip = ambientSources[1];
+
                 foreach (Background park in parkBackgrounds)
                 {
                     backgroundQueue.Enqueue(park);
@@ -88,6 +95,8 @@ public class BackgroundScrolling : MonoBehaviour
 
             if (currentStage == 2)
             {
+                ambience.clip = ambientSources[2];
+
                 backgroundQueue.Enqueue(trolleyBackground);
 
                 trolleyForegroundObject.transform.position = new Vector2(currentXPos - (changeInX / 2), 3);
