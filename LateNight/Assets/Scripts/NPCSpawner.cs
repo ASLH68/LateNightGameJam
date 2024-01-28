@@ -62,6 +62,7 @@ public class NPCSpawner : MonoBehaviour
         if (trolleyNPCToSpawn.x == 2)
         {
             trolleyNPCToSpawn = secondMostRecentlySpawned;
+            Debug.Log("New trolley npc: " + trolleyNPCToSpawn);
         }
     }
 }
