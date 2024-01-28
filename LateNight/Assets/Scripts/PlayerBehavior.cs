@@ -7,6 +7,8 @@ public class PlayerBehavior : MonoBehaviour
     public PlayerControls control;
 
     Vector2 move;
+
+    float lastFrameX;
     private bool holdingRight = false;
     private bool holdingLeft = false;
     [SerializeField] public Animator animator;
@@ -21,7 +23,7 @@ public class PlayerBehavior : MonoBehaviour
         control.Gameplay.Left.performed += ctx => holdingLeft = true;
         control.Gameplay.Left.canceled += ctx => holdingLeft = false;
 
-        
+        lastFrameX = transform.position.x;
     }
 
     void Start()
@@ -36,32 +38,39 @@ public class PlayerBehavior : MonoBehaviour
         {
             Vector2 moveVelocity = new Vector2(1, 0) * 5f * Time.deltaTime;
             transform.Translate(moveVelocity, Space.Self);
-            animator.SetBool("canWalk", true);
-
 
             Vector3 flip = transform.localScale;
             flip.x = 0.8086914f;
             transform.localScale = flip;
         }
+
         if(!holdingRight && !holdingLeft)
         {
             transform.Translate(Vector2.zero, Space.Self);
-            animator.SetBool("canWalk", false);
         }
 
         if(holdingLeft)
         {
             Vector2 moveVelocity = new Vector2(-1, 0) * 5f * Time.deltaTime;
             transform.Translate(moveVelocity, Space.Self);
-            animator.SetBool("canWalk", true);
-
 
             Vector3 flip = transform.localScale;
             flip.x = -0.8086914f;
             transform.localScale = flip;
         }
 
-        
+        // Using comparison instead of equal to account for float
+        // precision errors
+        if (Mathf.Abs(transform.position.x - lastFrameX) < 0.001F)
+        {
+            animator.SetBool("canWalk", false);
+        }
+        else
+        {
+            animator.SetBool("canWalk", true);
+        }
+
+        lastFrameX = transform.position.x;
     }
     private void OnEnable()
     {
