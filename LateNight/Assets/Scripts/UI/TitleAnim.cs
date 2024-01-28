@@ -5,7 +5,10 @@ using UnityEngine;
 public class TitleAnim : MonoBehaviour
 {
     [SerializeField] private GameObject _clockTime;
-    [SerializeField] private float _flickerTime;
+    [SerializeField] private float _onTime;
+    [SerializeField] private float _offTime;
+
+    private bool _isOn = true;
 
     private void OnEnable()
     {
@@ -17,7 +20,17 @@ public class TitleAnim : MonoBehaviour
         while (true)
         {
             _clockTime?.SetActive(!_clockTime.activeInHierarchy);
-            yield return new WaitForSeconds(_flickerTime);
+            
+            _isOn = !_isOn;
+
+            if (_isOn)
+            {
+                yield return new WaitForSeconds(_onTime);
+            }
+            else
+            {
+                yield return new WaitForSeconds(_offTime);
+            }
         }
     }
 }
