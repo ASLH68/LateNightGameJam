@@ -131,6 +131,8 @@ MonoBehaviour:
     looking."
   - I think I will stick to PB&Js, thank you very much.
   - Tacos can be just as much of a delicacy as any highfalutin sandwich.
+  _npcSprite: {fileID: 21300000, guid: 593dd29c150f7d746a6887ba7d001b8b, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &6093299216841563625
 CircleCollider2D:
   m_ObjectHideFlags: 0

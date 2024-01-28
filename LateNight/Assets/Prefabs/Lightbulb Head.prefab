@@ -127,6 +127,8 @@ MonoBehaviour:
   - "I guess other people are scared about what comes next\u2026"
   - Uh yeah no problem man.
   - Thats me, Mr. Positive.
+  _npcSprite: {fileID: 21300000, guid: 3ec0b4c0a1b09bc47acc0688dde003c4, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &4584942286085741643
 CircleCollider2D:
   m_ObjectHideFlags: 0

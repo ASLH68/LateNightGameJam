@@ -137,6 +137,8 @@ MonoBehaviour:
   - I guess even the best of us aren't perfect...
   - Are you sure? You three looked like you just left a garbage heap.
   - I feel really bad for the people with jury duty tomorrow.
+  _npcSprite: {fileID: 21300000, guid: d541844a773983f43a82aeb1da188f9f, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &8761513887198532213
 CircleCollider2D:
   m_ObjectHideFlags: 0

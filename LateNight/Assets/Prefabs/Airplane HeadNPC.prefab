@@ -127,6 +127,8 @@ MonoBehaviour:
   - Maybe there is still time for me to find my people...
   - Yeah... I get it
   - Sure, just watch where you're going
+  _npcSprite: {fileID: 21300000, guid: e476816c0b24af44da32e91089aad098, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &8003900802245595816
 CircleCollider2D:
   m_ObjectHideFlags: 0
