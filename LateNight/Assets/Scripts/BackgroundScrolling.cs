@@ -12,7 +12,7 @@ public class BackgroundScrolling : MonoBehaviour
 
     // 0 = city, 1 = park, 2 = trolley
     int currentStage = 0;
-    int[,] levelThresholds = { { 3, 1 }, { 3, 1 }, { 2, 1 } };
+    int[,] levelThresholds = { { 4, 2 }, { 3, 1 }, { 3, 1 } };
     int vulnerableOptions = 0;
     int peopleInteractedWith = 0;
 
