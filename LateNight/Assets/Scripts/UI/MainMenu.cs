@@ -50,6 +50,7 @@ public class MainMenu : MonoBehaviour
     /// <param name="val"></param>
     public void OpenSettings()
     {
+        _quitPromptDisplay.SetActive(false);
         var val = _settings.activeInHierarchy;
         _settings.SetActive(!val);
         _title.SetActive(val);
