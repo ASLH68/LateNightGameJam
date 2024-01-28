@@ -1052,10 +1052,6 @@ MonoBehaviour:
   TrolleyFont: {fileID: 11400000, guid: aaadc2a3ee3fe26479134c40a85d4971, type: 2}
   ParkFont: {fileID: 11400000, guid: b1ced8f892f447944bfebecc07ec6705, type: 2}
   DialogueBox: {fileID: 0}
-  CityKey: {fileID: 0}
-  TrolleyKey: {fileID: 0}
-  ParkKey: {fileID: 0}
-  InteractImg: {fileID: 0}
 --- !u!4 &851833015
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,7 +1104,6 @@ MonoBehaviour:
   foregroundObject: {fileID: 233432759}
   trolleyForegroundObject: {fileID: 1150187392120513486}
   trolleyDoor: {fileID: 1211464768}
-  TrolleyTrans: {fileID: 0}
 --- !u!114 &851833018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,6 +2208,18 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3457323204888203168, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457323204888203168, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457323204888203168, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457323204888203168, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -86.4
       objectReference: {fileID: 0}
@@ -2251,6 +2258,10 @@ PrefabInstance:
     - target: {fileID: 3457323204888203168, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457323204888203168, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3457323204888203171, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
       propertyPath: m_Name
