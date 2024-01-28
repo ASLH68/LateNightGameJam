@@ -125,6 +125,8 @@ MonoBehaviour:
   - So I don't need to have everything figured out...
   - Okay then... I'll be on my way then.
   - Guess I'll "see" you around.
+  _npcSprite: {fileID: -1539859266, guid: 793b73285eabcd749afeb3be0af97fed, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &2241362522462529130
 CircleCollider2D:
   m_ObjectHideFlags: 0
