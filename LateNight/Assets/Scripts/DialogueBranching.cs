@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
@@ -12,7 +13,10 @@ public class DialogueBranching : MonoBehaviour
     [SerializeField] string[] npcDialogue;
     [SerializeField] string[] playerResponses;
     [SerializeField] Sprite _npcSprite;
+    [SerializeField] AudioClip[] clips;
     private Image _npcPortrait;
+    private AudioSource _source;
+
 
     PlayerControls playerInputs;
 
@@ -50,6 +54,7 @@ public class DialogueBranching : MonoBehaviour
         manager = ButtonManager.staticInstance;
         playerScript = FindObjectOfType<PlayerBehavior>();
         gc = FindObjectOfType<GameController>();
+        _source = GetComponent<AudioSource>();
         if (isTrolleyDialogue)
         {
             trolleyScript = FindObjectOfType<TrolleyScene>();
@@ -209,6 +214,8 @@ public class DialogueBranching : MonoBehaviour
             if (isTrolleyDialogue)
             {
                 trolleyScript.MoveToNextDialog();
+                _source.clip = clips[Random.Range(0, 2)];
+                _source.Play();
             }
             else
             {
@@ -272,4 +279,10 @@ public class DialogueBranching : MonoBehaviour
         //leftButton.SetActive(true);
         //rightButton.SetActive(true);
     }
+
+    //public void NPCResponseDialogue()
+    //{
+    //    _source.clip = clips[Random.Range(0, 1)];
+    //    _source.Play();
+    //}
 }
