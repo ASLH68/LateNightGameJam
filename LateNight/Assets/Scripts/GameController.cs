@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class GameController : MonoBehaviour
     public TMP_FontAsset TrolleyFont;
     public TMP_FontAsset ParkFont;
     public TextMeshProUGUI DialogueBox;
+
+    [Header("Interact Icons")]
+    public Sprite CityKey;
+    public Sprite TrolleyKey;
+    public Sprite ParkKey;
+    public Image InteractImg;
     // Start is called before the first frame update
     void Start()
     {

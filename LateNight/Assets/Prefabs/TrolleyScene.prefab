@@ -1,5 +1,257 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1100623026662857310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8323031009570400657}
+  - component: {fileID: 2481396072678065837}
+  m_Layer: 0
+  m_Name: Repeat E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8323031009570400657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100623026662857310}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.69, y: 1.32, z: 4.2069764}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.214375}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 3457323204888203168}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2481396072678065837
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100623026662857310}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 20d12dee6f9406d46b20533ebddf606a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21, y: 21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &3063157818685340478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2397877464983642910}
+  - component: {fileID: 3265646623256693778}
+  m_Layer: 0
+  m_Name: Gator E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2397877464983642910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063157818685340478}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 1.22, z: 4.2069764}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.214375}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 3457323204888203168}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3265646623256693778
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063157818685340478}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 20d12dee6f9406d46b20533ebddf606a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21, y: 21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &3115922898991769204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529578696952378913}
+  - component: {fileID: 2654316154766462930}
+  m_Layer: 0
+  m_Name: LightBulb E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &529578696952378913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115922898991769204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.69, y: 1.8296, z: 4.2069764}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.214375}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 3457323204888203168}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2654316154766462930
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115922898991769204}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 20d12dee6f9406d46b20533ebddf606a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21, y: 21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &3457323204888203171
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,14 +290,17 @@ Transform:
   m_GameObject: {fileID: 3457323204888203171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 75.6524, y: -132.60867, z: -3.053063}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.27, y: 1.27, z: 0.72571427}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3457323205539581986}
   - {fileID: 3457323206217621216}
   - {fileID: 3457323204928320148}
   - {fileID: 3457323205729432801}
   - {fileID: 2403048265046138836}
+  - {fileID: 8323031009570400657}
+  - {fileID: 2397877464983642910}
+  - {fileID: 529578696952378913}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,6 +328,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b3a9531400e502e42bf92080cefe66f7, type: 3}
   - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
   - {fileID: 21300000, guid: 4d7c54c1521e4124da9368103c0268b8, type: 3}
+  indicators:
+  - {fileID: 3063157818685340478}
+  - {fileID: 3115922898991769204}
+  - {fileID: 1100623026662857310}
   characterDialogue:
   - {fileID: 5469431370171238818}
   - {fileID: 867413283184623398}
@@ -129,6 +388,7 @@ MonoBehaviour:
   - 'Ok, I think that''s my cue to leave. '
   - Whoof tough crowd huh?
   _npcSprite: {fileID: 21300000, guid: ae2b36aa17a5fae4a9acc4969551584e, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &867413283184623398
 MonoBehaviour:
@@ -172,6 +432,7 @@ MonoBehaviour:
   - Uh yeah no problem man.
   - Thats me, Mr. Positive.
   _npcSprite: {fileID: 21300000, guid: 3ec0b4c0a1b09bc47acc0688dde003c4, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &2386351146360738726
 MonoBehaviour:
@@ -218,6 +479,7 @@ MonoBehaviour:
   - '*Continue to say nothing*'
   - Thanks for the ride.
   _npcSprite: {fileID: 21300000, guid: c470b67ce5e4b5a4db586d227c13fb60, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!61 &1541178543414629602
 BoxCollider2D:
@@ -266,6 +528,7 @@ MonoBehaviour:
   - I can't believe you.
   - I should have asked for a souvenir! I'm glad I was able to see you again.
   _npcSprite: {fileID: 21300000, guid: 0aa44ab08bc8e3e4fa77de2dbc311afb, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &1259242848198344822
 MonoBehaviour:
@@ -289,6 +552,7 @@ MonoBehaviour:
   - Despite the ups and downs today, I think seeing you agains means that I ended
     today in the green.
   _npcSprite: {fileID: 21300000, guid: 18a1f60f04885d0489ff9c0ee1bbade7, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &1525031594173164390
 MonoBehaviour:
@@ -311,6 +575,7 @@ MonoBehaviour:
   - The next time I see you, I need to get your name. It's a name worth knowing.
   - You'll need to tell me where you work. I should try some of your cooking.
   _npcSprite: {fileID: 21300000, guid: 249340adc2ae08f40846c245a70492fa, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &4049881680274738717
 MonoBehaviour:
@@ -333,6 +598,7 @@ MonoBehaviour:
   - Did you finally manage to sell one? No... maybe tomorrow's the day!
   - You move around right? I wonder where I will see you next?
   _npcSprite: {fileID: 21300000, guid: d2848869af2744c41b8b5f6c2a47ae06, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &8788832217783909660
 MonoBehaviour:
@@ -354,6 +620,7 @@ MonoBehaviour:
   - I don't remember who you are.
   - Okay? Do I know you?
   _npcSprite: {fileID: 0}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &5146085671028684010
 MonoBehaviour:
@@ -376,6 +643,7 @@ MonoBehaviour:
   - I'm glad you guys were able to get here safely. We kind of need you.
   - I've always heard that Justice never sleeps, but you need to, please.
   _npcSprite: {fileID: 0}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &4489475275458994313
 MonoBehaviour:
@@ -398,6 +666,7 @@ MonoBehaviour:
   - Woah man watch out. You're gonna end up taking someone out like that.
   - Oh hey again. I hope the hotel review went well.
   _npcSprite: {fileID: 0}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &3998856264971053832
 MonoBehaviour:
@@ -419,6 +688,7 @@ MonoBehaviour:
   - '*Say nothing*'
   - Good night.
   _npcSprite: {fileID: 21300000, guid: c470b67ce5e4b5a4db586d227c13fb60, type: 3}
+  trolleyInteractPrompt: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!1 &3457323204928320151
 GameObject:
@@ -682,7 +952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3457323206217621216}
   - component: {fileID: 3457323206217621217}
-  - component: {fileID: 6722237758816386229}
+  - component: {fileID: 125813105646786016}
   m_Layer: 0
   m_Name: TrolleyBackground
   m_TagString: Untagged
@@ -757,7 +1027,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!328 &6722237758816386229
+--- !u!328 &125813105646786016
 VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -786,7 +1056,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []

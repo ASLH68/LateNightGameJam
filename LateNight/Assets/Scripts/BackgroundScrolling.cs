@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BackgroundScrolling : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class BackgroundScrolling : MonoBehaviour
     [SerializeField] GameObject foregroundObject;
     [SerializeField] GameObject trolleyForegroundObject;
     [SerializeField] GameObject trolleyDoor;
+    [SerializeField] GameObject TrolleyTrans;
 
     float currentXPos = 50f;
     float changeInX = 25f;
@@ -89,6 +91,7 @@ public class BackgroundScrolling : MonoBehaviour
                 backgroundQueue.Enqueue(trolleyBackground);
 
                 trolleyForegroundObject.transform.position = new Vector2(currentXPos - (changeInX / 2), 3);
+                foregroundObject = TrolleyTrans;
                 //foregroundObject.GetComponent<BoxCollider2D>().enabled = true;
                 //spawner.SpawnTrolleyNPC(currentXPos);
             }
