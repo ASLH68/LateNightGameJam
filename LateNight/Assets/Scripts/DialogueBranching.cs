@@ -23,6 +23,7 @@ public class DialogueBranching : MonoBehaviour
     static GameObject dialogueBox;
 
     ButtonManager manager;
+    static NPCSpawner spawner;
     GameController gc;
 
     static PlayerBehavior playerScript;
@@ -41,6 +42,11 @@ public class DialogueBranching : MonoBehaviour
         manager = ButtonManager.staticInstance;
         playerScript = FindObjectOfType<PlayerBehavior>();
         gc = FindObjectOfType<GameController>();
+
+        if (spawner == null)
+        {
+            spawner = FindObjectOfType<NPCSpawner>();
+        }
 
         if (interactPrompt == null)
         {
@@ -139,9 +145,10 @@ public class DialogueBranching : MonoBehaviour
 
             foreach (int vulner in vulnerableOption)
             {
-                if (npcDialogueIndex == vulner)
+                if (npcDialogueIndex == vulner && !wasVulnerable)
                 {
                     gc.personaldialogueoption();
+                    spawner.SetTrolleyNPC();
                     wasVulnerable = true;
                 }
             }
@@ -160,13 +167,13 @@ public class DialogueBranching : MonoBehaviour
 
     private void DisplayOptions()
     {
-        //if (isDoneTalking)
-        //{
-        //    rightButtonText.text = "Goodbye";
-        //    rightButton.SetActive(true);
+        if (isDoneTalking)
+        {
+            rightButtonText.text = "Goodbye";
+            rightButton.SetActive(true);
 
-        //    return;
-        //}
+            return;
+        }
 
         leftButtonText.text = playerResponses[npcDialogueIndex * 2];
         rightButtonText.text = playerResponses[(npcDialogueIndex * 2) + 1];

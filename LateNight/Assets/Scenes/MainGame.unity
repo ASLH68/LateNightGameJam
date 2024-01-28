@@ -1139,6 +1139,7 @@ MonoBehaviour:
   - {fileID: 9171415519592002272, guid: 457c5d9706e688b499c84f88f6f3bf22, type: 3}
   - {fileID: 8740234363866778883, guid: 420038b9b714d8d41b868978d3d14018, type: 3}
   spawnPoint: {fileID: 1355341530}
+  busDriver: {fileID: 3367047142732560749, guid: 0bfc7fa2846501a4ca1a596314ee1ccf, type: 3}
 --- !u!114 &851833019
 MonoBehaviour:
   m_ObjectHideFlags: 0

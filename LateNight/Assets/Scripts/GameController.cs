@@ -9,11 +9,13 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform spawnPoint;
     [SerializeField] bool spawnonce;
     BackgroundScrolling backgroundManager;
+    NPCSpawner spawner;
 
     // Start is called before the first frame update
     void Start()
     {
         backgroundManager = BackgroundScrolling.singletonInstance;
+        spawner = FindObjectOfType<NPCSpawner>();
         spawnonce = true;
     }
 
@@ -67,5 +69,10 @@ public class GameController : MonoBehaviour
     {
         points += 1;
         backgroundManager.UpdateCounters(true);
+
+        if (points == 1)
+        {
+
+        }
     }
 }
