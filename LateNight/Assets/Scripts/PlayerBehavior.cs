@@ -14,6 +14,7 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] public Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Sprite pixel;
+    [SerializeField] AudioSource walkSound;
 
     void Awake()
     {
@@ -38,6 +39,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         if(holdingRight)
         {
+            walkSound.volume = 1;
+
             Vector2 moveVelocity = new Vector2(1, 0) * 5f * Time.deltaTime;
             transform.Translate(moveVelocity, Space.Self);
 
@@ -48,11 +51,15 @@ public class PlayerBehavior : MonoBehaviour
 
         if(!holdingRight && !holdingLeft)
         {
+            walkSound.volume = 0;
+
             transform.Translate(Vector2.zero, Space.Self);
         }
 
         if(holdingLeft)
         {
+            walkSound.volume = 1;
+
             Vector2 moveVelocity = new Vector2(-1, 0) * 5f * Time.deltaTime;
             transform.Translate(moveVelocity, Space.Self);
 
