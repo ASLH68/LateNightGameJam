@@ -735,9 +735,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 298682189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f525e08cd5054429fd28d2697145a2, type: 3}
+  m_Script: {fileID: 11500000, guid: cabe5d0e0707b354c8a580b6064f4f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sounds:
+  - clip: {fileID: 8300000, guid: 86c0d1ee7615f2143acbaba95c89b9b2, type: 3}
+    mixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
+    name: Hover
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 31217e50a9c29bf4c87f3003cba880ad, type: 3}
+    mixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
+    name: Click
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8b4015e762c00cd45aa1e2b64b742704, type: 3}
+    mixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
+    name: MenuMusic
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &298682192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,30 +767,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298682189}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: cfd6761660311af4ab19576dc36e4059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -317809657
-      Data2: 1246858973
-      Data3: -170201714
-      Data4: 18521009
-    Path: event:/Music/BasicTrack
-  Event: 
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  sfxVolumeSlider: {fileID: 1359274022}
+  musicVolumeSlider: {fileID: 2000244622}
+  sfxMixer: {fileID: -6110776241761589418, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
+  musicMixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
 --- !u!1 &428510782
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +863,18 @@ MonoBehaviour:
       - m_Target: {fileID: 698530720}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ConfirmQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 698530720}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1666,19 +1685,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &740249686
-MonoBehaviour:
+--- !u!81 &740249686
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740249682}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!1 &747005782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,6 +1989,18 @@ MonoBehaviour:
       - m_Target: {fileID: 124073977}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OpenSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 698530720}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2329,10 +2355,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Rachel Rudy: Production \u2022 Andrea Swihart-DeCoster: Programmer \u2022
-    Miles Rogers: Tech/Environment Artist \u2022 Nick Grinstead: Programmer \u2022
-    Nick Rice: Narrative Design \u2022 Mark Hanson: Programmer \u2022 Oliver Creighton:
-    Game Design \u2022 Kyle Kotovsky: Game Design \u2022 Caden Sheahan: Audio Design"
+  m_text: "Rachel Rudy: Production & Art \u2022 Andrea Swihart-DeCoster: Programmer
+    \u2022 Miles Rogers: Tech/Environment Artist \u2022 Nick Grinstead: Programmer
+    \u2022 Nick Rice: Narrative Design \u2022 Mark Hanson: Programmer \u2022 Oliver
+    Creighton: Game Design \u2022 Kyle Kotovsky: Game Design \u2022 Caden Sheahan:
+    Audio Design & Art"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a35eae28cbaed404d8a6d1931cb46652, type: 2}
   m_sharedMaterial: {fileID: -4042323553201382922, guid: a35eae28cbaed404d8a6d1931cb46652, type: 2}
@@ -2836,13 +2863,13 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.578
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 298682191}
-        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
-        m_MethodName: SFXVolumeLevel
+      - m_Target: {fileID: 298682192}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetSFXVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3180,6 +3207,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 698530720}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1479147670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3381,6 +3420,18 @@ MonoBehaviour:
       - m_Target: {fileID: 124073977}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 698530720}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3735,6 +3786,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 698530720}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1926743085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3995,13 +4058,13 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.578
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 298682191}
-        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
-        m_MethodName: MusicVolumeLevel
+      - m_Target: {fileID: 298682192}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

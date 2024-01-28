@@ -101,4 +101,9 @@ public class MainMenu : MonoBehaviour
     {
         _controls.currentActionMap.Disable();
     }
+
+    public void PlayOnClick()
+    {
+        AudioManager.instance.Play("Click");
+    }
 }
