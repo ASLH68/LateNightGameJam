@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] public float points;
     [SerializeField] public GameObject[] Npc;
     [SerializeField] Transform spawnPoint;
-    [SerializeField] bool spawnonce;
+    //[SerializeField] bool spawnonce;
     BackgroundScrolling backgroundManager;
     NPCSpawner spawner;
     public TMP_FontAsset CityFont;
@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     {
         backgroundManager = BackgroundScrolling.singletonInstance;
         spawner = FindObjectOfType<NPCSpawner>();
-        spawnonce = true;
+        //spawnonce = true;
     }
 
     // Update is called once per frame

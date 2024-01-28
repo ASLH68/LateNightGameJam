@@ -9,6 +9,7 @@ public class PlayerBehavior : MonoBehaviour
     Vector2 move;
     private bool holdingRight = false;
     private bool holdingLeft = false;
+    [SerializeField] public Animator animator;
 
     void Awake()
     {
@@ -35,18 +36,30 @@ public class PlayerBehavior : MonoBehaviour
         {
             Vector2 moveVelocity = new Vector2(1, 0) * 5f * Time.deltaTime;
             transform.Translate(moveVelocity, Space.Self);
+            animator.SetBool("canWalk", true);
+
+
+            Vector3 flip = transform.localScale;
+            flip.x = 0.8086914f;
+            transform.localScale = flip;
         }
-        if(!holdingRight || !holdingLeft)
+        if(!holdingRight && !holdingLeft)
         {
             transform.Translate(Vector2.zero, Space.Self);
+            animator.SetBool("canWalk", false);
         }
 
         if(holdingLeft)
         {
             Vector2 moveVelocity = new Vector2(-1, 0) * 5f * Time.deltaTime;
             transform.Translate(moveVelocity, Space.Self);
+            animator.SetBool("canWalk", true);
+
+
+            Vector3 flip = transform.localScale;
+            flip.x = -0.8086914f;
+            transform.localScale = flip;
         }
-        
 
         
     }
