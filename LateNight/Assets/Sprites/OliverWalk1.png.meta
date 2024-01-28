@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09ab35ea91c67ba4dbae254f773e9cd9
+guid: cc333eef85d1a6f4589f44578591319a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_0
+      name: OliverWalk1_0
       rect:
         serializedVersion: 2
-        x: 75
-        y: 1000
-        width: 150
-        height: 500
+        x: 174
+        y: 1849
+        width: 152
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db39921c192b1fb44bfdecacc1173df2
-      internalID: -1834784592
+      spriteID: 95f05856008e09e4e95377c969df51b9
+      internalID: 247148997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_1
+      name: OliverWalk1_1
       rect:
         serializedVersion: 2
-        x: 475
-        y: 500
-        width: 150
-        height: 1000
+        x: 774
+        y: 1849
+        width: 152
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12e6fda473d279b49a6dbd2a2f9d9034
-      internalID: -1638646067
+      spriteID: 4bccfb944ba936149b366edb894709c3
+      internalID: 468918477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_2
+      name: OliverWalk1_2
       rect:
         serializedVersion: 2
-        x: 850
-        y: 500
-        width: 225
-        height: 975
+        x: 1348
+        y: 1849
+        width: 229
+        height: 478
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d4cb54c21c3b584d81237c8343589df
-      internalID: -1905177250
+      spriteID: 6885c22cff3605a4080745ba191b5172
+      internalID: -1968155320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_3
+      name: OliverWalk1_3
       rect:
         serializedVersion: 2
-        x: 1250
-        y: 1000
-        width: 225
-        height: 475
+        x: 148
+        y: 1249
+        width: 229
+        height: 478
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2399854a4ca7de04b9d7a2656ec1070e
-      internalID: 2095144687
+      spriteID: e7a221c593ef5194f94fe7313ae40790
+      internalID: -1487452929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_4
+      name: OliverWalk1_4
       rect:
         serializedVersion: 2
-        x: 75
-        y: 500
-        width: 150
-        height: 475
+        x: 774
+        y: 1249
+        width: 152
+        height: 478
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9935f77545e8a5148ab60b8833f3bb47
-      internalID: 767056322
+      spriteID: 7f89aa7badbc0ec4ba158f4d049e47bd
+      internalID: -563605890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_5
+      name: OliverWalk1_5
       rect:
         serializedVersion: 2
-        x: 1250
-        y: 500
-        width: 225
-        height: 475
+        x: 1374
+        y: 1249
+        width: 152
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d492d887cfdc54ab719daaa755d018
-      internalID: 1473528886
+      spriteID: 0ebebd147e286e347ae8d69a683cb5ab
+      internalID: 443044426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_6
+      name: OliverWalk1_6
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 225
-        height: 475
+        x: 174
+        y: 649
+        width: 152
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7df50b76fb00cfa42a23743c08aab283
-      internalID: 2143394478
+      spriteID: b3db670602bddf5488bab7b97e03e787
+      internalID: -996557704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OliverWalkSpritesheet_7
+      name: OliverWalk1_7
       rect:
         serializedVersion: 2
-        x: 475
-        y: 0
-        width: 150
-        height: 475
+        x: 748
+        y: 649
+        width: 229
+        height: 478
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee9ceeddd35f0cd489236eb70f3e882c
-      internalID: -1359460421
+      spriteID: 6618b8c52c9a466459da0be4d9f8f3a8
+      internalID: 1313819464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliverWalk1_8
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 649
+        width: 229
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfb650115991384aab988f90c766230
+      internalID: 544321208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliverWalk1_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 49
+        width: 152
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a186d39ff398d64fabe20cd0ec62423
+      internalID: -1659344759
       vertices: []
       indices: 
       edges: []
@@ -283,14 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OliverWalkSpritesheet_0: -1834784592
-      OliverWalkSpritesheet_1: -1638646067
-      OliverWalkSpritesheet_2: -1905177250
-      OliverWalkSpritesheet_3: 2095144687
-      OliverWalkSpritesheet_4: 767056322
-      OliverWalkSpritesheet_5: 1473528886
-      OliverWalkSpritesheet_6: 2143394478
-      OliverWalkSpritesheet_7: -1359460421
+      OliverWalk1_0: 247148997
+      OliverWalk1_1: 468918477
+      OliverWalk1_2: -1968155320
+      OliverWalk1_3: -1487452929
+      OliverWalk1_4: -563605890
+      OliverWalk1_5: 443044426
+      OliverWalk1_6: -996557704
+      OliverWalk1_7: 1313819464
+      OliverWalk1_8: 544321208
+      OliverWalk1_9: -1659344759
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

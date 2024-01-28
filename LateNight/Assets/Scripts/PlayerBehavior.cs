@@ -30,7 +30,7 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start()
     {
-        
+        animator.SetBool("IsPixel", false);
     }
 
     // Update is called once per frame
@@ -81,7 +81,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = pixel;
-        
+        animator.SetBool("IsPixel", true);
     }
 
 

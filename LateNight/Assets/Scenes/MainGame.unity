@@ -212,6 +212,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 844636901678355638, guid: 8c957d63f11bb5946ac37fcdbf95da0f, type: 3}
   m_PrefabInstance: {fileID: 903092737}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &199290062 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4714134062808723012, guid: 8c957d63f11bb5946ac37fcdbf95da0f, type: 3}
+  m_PrefabInstance: {fileID: 903092737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &233432759 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9141703212857364262, guid: 6a2def7f57d27ac489cb70040dd25147, type: 3}
@@ -1319,9 +1324,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4714134062808723014, guid: 8c957d63f11bb5946ac37fcdbf95da0f, type: 3}
+      propertyPath: pixel
+      value: 
+      objectReference: {fileID: -2100243314, guid: 07a04346b1aa4fa4ea3774c7e0cfdb3b, type: 3}
+    - target: {fileID: 4714134062808723014, guid: 8c957d63f11bb5946ac37fcdbf95da0f, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 199290058}
+    - target: {fileID: 4714134062808723014, guid: 8c957d63f11bb5946ac37fcdbf95da0f, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 199290062}
     - target: {fileID: 4714134062808723015, guid: 8c957d63f11bb5946ac37fcdbf95da0f, type: 3}
       propertyPath: m_RootOrder
       value: 1
