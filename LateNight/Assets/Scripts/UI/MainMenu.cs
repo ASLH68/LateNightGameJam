@@ -34,7 +34,6 @@ public class MainMenu : MonoBehaviour
         _controls.currentActionMap.FindAction("Back").started += DisplayPrompt;
         _settings.SetActive(false);
         _quitPromptDisplay.SetActive(false);
-        Play("MenuMusic");
     }
 
     /// <summary>
