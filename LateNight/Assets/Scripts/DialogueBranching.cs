@@ -207,6 +207,9 @@ public class DialogueBranching : MonoBehaviour
         leftButton.SetActive(false);
         rightButton.SetActive(false);
 
+        _source.clip = clips[Random.Range(0, 2)];
+        _source.Play();
+
         if (isDoneTalking)
         {
             dialogueBox.SetActive(false);
@@ -214,8 +217,6 @@ public class DialogueBranching : MonoBehaviour
             if (isTrolleyDialogue)
             {
                 trolleyScript.MoveToNextDialog();
-                _source.clip = clips[Random.Range(0, 2)];
-                _source.Play();
             }
             else
             {

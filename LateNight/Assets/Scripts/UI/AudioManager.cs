@@ -48,11 +48,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        Play("MenuMusic");
-    }
-
     #region Sound Controls
     public void Play(string name, float volume = -1)
     {
