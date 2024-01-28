@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Background : MonoBehaviour
 {
@@ -42,10 +43,12 @@ public class Background : MonoBehaviour
             if(backgroundType == whatZone.city)
             {
                 GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().CityFont;
+                GameObject.FindObjectOfType<GameController>().InteractImg.sprite = GameObject.FindObjectOfType<GameController>().CityKey;
             }
             else if (backgroundType == whatZone.park) 
             {
                 GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().ParkFont;
+                GameObject.FindObjectOfType<GameController>().InteractImg.sprite = GameObject.FindObjectOfType<GameController>().ParkKey;
                 GameObject playerob = GameObject.FindWithTag("Player");
                 PlayerBehavior pb = playerob.GetComponent<PlayerBehavior>();
                 pb.switchSprite();
@@ -53,6 +56,7 @@ public class Background : MonoBehaviour
             else if (backgroundType == whatZone.trolley)
             {
                 GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().TrolleyFont;
+                GameObject.FindObjectOfType<GameController>().InteractImg.sprite = GameObject.FindObjectOfType<GameController>().TrolleyKey;
             }
         }
     }

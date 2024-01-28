@@ -42,7 +42,7 @@ public class PlayerBehavior : MonoBehaviour
             transform.Translate(moveVelocity, Space.Self);
 
             Vector3 flip = transform.localScale;
-            flip.x = 0.8086914f;
+            flip.x = 0.4512983f;
             transform.localScale = flip;
         }
 
@@ -57,7 +57,7 @@ public class PlayerBehavior : MonoBehaviour
             transform.Translate(moveVelocity, Space.Self);
 
             Vector3 flip = transform.localScale;
-            flip.x = -0.8086914f;
+            flip.x = -0.4512983f;
             transform.localScale = flip;
         }
 

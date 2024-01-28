@@ -16,6 +16,8 @@ public class DialogueBranching : MonoBehaviour
 
     PlayerControls playerInputs;
 
+    public GameObject trolleyInteractPrompt;
+
     static GameObject interactPrompt;
     static TextMeshProUGUI dialogueText;
     static Text leftButtonText;
@@ -71,6 +73,7 @@ public class DialogueBranching : MonoBehaviour
             dialogueText = dialogueBox.GetComponentInChildren<TextMeshProUGUI>();
             GameObject.FindObjectOfType<GameController>().DialogueBox = dialogueText;
             dialogueText.font = GameObject.FindObjectOfType<GameController>().CityFont;
+            interactPrompt.GetComponent<Image>().sprite = GameObject.FindObjectOfType<GameController>().CityKey;
             dialogueBox.SetActive(false);
         }
 
@@ -78,6 +81,7 @@ public class DialogueBranching : MonoBehaviour
         {
             dialogueBox.SetActive(true);
             _npcPortrait = GameObject.Find("Portrait").GetComponent<Image>();
+
             dialogueBox.SetActive(false);
         }
 
@@ -106,7 +110,14 @@ public class DialogueBranching : MonoBehaviour
 
             isInteracting = true;
 
-            interactPrompt.SetActive(false);
+            if (isTrolleyDialogue)
+            {
+                //trolleyInteractPrompt.SetActive(false);
+            }
+            else
+            {
+                interactPrompt.SetActive(false);
+            }
 
             dialogueBox.SetActive(true);
             _npcPortrait.sprite = _npcSprite;
@@ -155,8 +166,15 @@ public class DialogueBranching : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !isDoneTalking)
         {
-            interactPrompt.SetActive(true);
-            interactPrompt.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 2);
+            if (isTrolleyDialogue)
+            {
+                //trolleyInteractPrompt.SetActive(true);
+            }
+            else
+            {
+                interactPrompt.SetActive(true);
+                interactPrompt.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f);
+            }
 
             canInteract = true;
         }
@@ -166,7 +184,14 @@ public class DialogueBranching : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            interactPrompt.SetActive(false);
+            if (isTrolleyDialogue)
+            {
+                //trolleyInteractPrompt.SetActive(false);
+            }
+            else
+            {
+                interactPrompt.SetActive(false);
+            }
 
             canInteract = false;
         }
