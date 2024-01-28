@@ -308,7 +308,7 @@ MonoBehaviour:
     you recognize from your walk.
   playerResponses:
   - The next time I see you, I need to get your name. It's a name worth knowing.
-  - 
+  - You'll need to tell me where you work. I should try some of your cooking.
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &4049881680274738717
@@ -348,7 +348,7 @@ MonoBehaviour:
   vulnerableOption: 
   closingDialogueThreshold: 0
   npcDialogue:
-  - 
+  - A park ranger looks at you with strangely familiar and does a double take.
   playerResponses:
   - I don't remember who you are.
   - Okay? Do I konw you?
@@ -372,7 +372,7 @@ MonoBehaviour:
   - The noise in the trolley car triples as the 3 women from earlier stumble through
     the doors and enthusiastically greet you.
   playerResponses:
-  - 
+  - I'm glad you guys were able to get here safely. We kind of need you.
   - 
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1
