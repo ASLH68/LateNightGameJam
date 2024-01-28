@@ -329,8 +329,8 @@ MonoBehaviour:
   - The smell of a hundred different fruits hits your nostrils as the colorful lady
     from early in the evening plops down beside you.
   playerResponses:
-  - 
-  - 
+  - Did you finally manage to sell one? No... maybe tomorrow's the day!
+  - You move around right? I wonder where I will see you next?
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &8788832217783909660
@@ -351,7 +351,7 @@ MonoBehaviour:
   - A park ranger looks at you with strangely familiar and does a double take.
   playerResponses:
   - I don't remember who you are.
-  - Okay? Do I konw you?
+  - Okay? Do I know you?
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &5146085671028684010
@@ -373,7 +373,7 @@ MonoBehaviour:
     the doors and enthusiastically greet you.
   playerResponses:
   - I'm glad you guys were able to get here safely. We kind of need you.
-  - 
+  - I've always heard that Justice never sleeps, but you need to, please.
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!114 &4489475275458994313
@@ -394,8 +394,8 @@ MonoBehaviour:
   - Staring through the window you feel yourself get jostled slightly as another
     passenger takes the seat next to you.
   playerResponses:
-  - 
-  - 
+  - Woah man watch out. You're gonna end up taking someone out like that.
+  - Oh hey again. I hope the hotel review went well.
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1
 --- !u!1 &3457323204928320151
