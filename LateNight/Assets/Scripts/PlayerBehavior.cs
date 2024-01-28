@@ -12,6 +12,8 @@ public class PlayerBehavior : MonoBehaviour
     private bool holdingRight = false;
     private bool holdingLeft = false;
     [SerializeField] public Animator animator;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite pixel;
 
     void Awake()
     {
@@ -72,6 +74,17 @@ public class PlayerBehavior : MonoBehaviour
 
         lastFrameX = transform.position.x;
     }
+
+
+
+    public void switchSprite()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = pixel;
+        
+    }
+
+
     private void OnEnable()
     {
         control.Gameplay.Enable();
