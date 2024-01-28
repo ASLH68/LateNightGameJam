@@ -1257,6 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   genericNPCs:
+  - {fileID: 5975345058954305476, guid: 3944a04368bf80a4794999adbe635508, type: 3}
   - {fileID: 891339079297980386, guid: 73c73906d3726074a8373b3f537d91ad, type: 3}
   - {fileID: 3625873243260919673, guid: 7efe51249cba39147856b8d62f3ac66d, type: 3}
   - {fileID: 6649249099767626629, guid: 817f7666fce5fb849959b58827f7d20e, type: 3}
