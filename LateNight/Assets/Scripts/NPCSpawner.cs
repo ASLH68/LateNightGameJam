@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class NPCSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject[] vulnerableNPCs;
+    //[SerializeField] GameObject[] vulnerableNPCs;
     [SerializeField] GameObject[] genericNPCs;
     [SerializeField] Transform spawnPoint;
 
     GameController gc;
-    int nextPointThreshold = 1;
+    //int nextPointThreshold = 1;
     int genericNPCIndex = 0;
+
+    // X value represents list (0 for vulnerable, 1 for generic), y represents index
+    int mostRecentlySpawned;
+    int secondMostRecentlySpawned;
+    public int trolleyNPCToSpawn = -1;
+    [SerializeField] GameObject busDriver;
 
     private void Start()
     {
@@ -21,17 +27,48 @@ public class NPCSpawner : MonoBehaviour
     {
         spawnPoint.position = new Vector2(spawnLocation, spawnPoint.position.y);
 
-        if (gc.points >= nextPointThreshold)
-        {
-            Instantiate(vulnerableNPCs[nextPointThreshold - 1], spawnPoint.position, spawnPoint.rotation);
+        secondMostRecentlySpawned = mostRecentlySpawned;
+        mostRecentlySpawned = genericNPCIndex;
 
-            nextPointThreshold++;
-        }
-        else
+        //if (gc.points >= nextPointThreshold)
+        //{
+        //    Instantiate(vulnerableNPCs[nextPointThreshold - 1], spawnPoint.position, spawnPoint.rotation);
+
+        //    nextPointThreshold++;
+        //}
+        //else
+        //{
+        if (genericNPCIndex < genericNPCs.Length)
         {
             Instantiate(genericNPCs[genericNPCIndex], spawnPoint.position, spawnPoint.rotation);
 
             genericNPCIndex++;
+        }
+        //}
+    }
+
+    public void SpawnTrolleyNPC()
+    {
+        //if (trolleyNPCToSpawn.x == 0)
+        //{
+        //    Instantiate(vulnerableNPCs[(int)trolleyNPCToSpawn.y], new Vector2(position, 0), Quaternion.identity);
+        //}
+        //if (trolleyNPCToSpawn.y == 1)
+        //{
+        //    Instantiate(genericNPCs[(int)trolleyNPCToSpawn.y], new Vector2(position, 0), Quaternion.identity);
+        //}
+        //else
+        //{
+        //    Instantiate(busDriver, new Vector2(position, -1.4f), Quaternion.identity);
+        //}
+    }
+
+    public void SetTrolleyNPC()
+    {
+        if (trolleyNPCToSpawn == -1)
+        {
+            trolleyNPCToSpawn = secondMostRecentlySpawned;
+            Debug.Log("New trolley npc: " + trolleyNPCToSpawn);
         }
     }
 }

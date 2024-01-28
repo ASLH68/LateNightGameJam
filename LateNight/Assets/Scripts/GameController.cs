@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -7,14 +8,19 @@ public class GameController : MonoBehaviour
     [SerializeField] public float points;
     [SerializeField] public GameObject[] Npc;
     [SerializeField] Transform spawnPoint;
-    [SerializeField] bool spawnonce;
+    //[SerializeField] bool spawnonce;
     BackgroundScrolling backgroundManager;
-
+    NPCSpawner spawner;
+    public TMP_FontAsset CityFont;
+    public TMP_FontAsset TrolleyFont;
+    public TMP_FontAsset ParkFont;
+    public TextMeshProUGUI DialogueBox;
     // Start is called before the first frame update
     void Start()
     {
         backgroundManager = BackgroundScrolling.singletonInstance;
-        spawnonce = true;
+        spawner = FindObjectOfType<NPCSpawner>();
+        //spawnonce = true;
     }
 
     // Update is called once per frame
@@ -65,7 +71,12 @@ public class GameController : MonoBehaviour
     }
     public void personaldialogueoption()
     {
-        points += 2;
+        points += 1;
         backgroundManager.UpdateCounters(true);
+
+        if (points == 1)
+        {
+
+        }
     }
 }
