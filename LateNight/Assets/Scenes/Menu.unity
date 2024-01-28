@@ -739,15 +739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sounds:
-  - clip: {fileID: 8300000, guid: 86c0d1ee7615f2143acbaba95c89b9b2, type: 3}
-    mixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
-    name: Hover
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 31217e50a9c29bf4c87f3003cba880ad, type: 3}
-    mixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
+    mixer: {fileID: -6110776241761589418, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
     name: Click
     volume: 1
     pitch: 1
@@ -756,9 +749,9 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 8b4015e762c00cd45aa1e2b64b742704, type: 3}
     mixer: {fileID: 5121704739003027445, guid: 9aa86dbe9acd2d44b817657829ad8675, type: 2}
     name: MenuMusic
-    volume: 0.75
+    volume: 0.5
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!114 &298682192
 MonoBehaviour:
@@ -2861,9 +2854,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1421117895}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.578
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4056,9 +4049,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 51371452}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.578
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
