@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrolleyScene : MonoBehaviour
 {
@@ -12,15 +13,24 @@ public class TrolleyScene : MonoBehaviour
     int dialogIndex = 0;
 
     PlayerBehavior playerControls;
+    NPCSpawner spawner;
 
     private void Awake()
     {
-        playerControls = FindAnyObjectByType<PlayerBehavior>();
+        playerControls = FindObjectOfType<PlayerBehavior>();
+        spawner = FindObjectOfType<NPCSpawner>();
     }
 
     public void StartTrolleyScene()
     {
-        // TODO determine sprite of alt character
+        if (spawner.trolleyNPCToSpawn == -1)
+        {
+            busCharacters[busCharacters.Length - 1].sprite = trolleyDriver;
+        }
+        else
+        {
+            busCharacters[busCharacters.Length - 1].sprite = repeatCharSprites[spawner.trolleyNPCToSpawn];
+        }
 
         playerControls.control.Disable();
         Camera.main.transform.position = transform.position;
@@ -35,7 +45,7 @@ public class TrolleyScene : MonoBehaviour
 
         if (dialogIndex >= characterDialog.Length)
         {
-            // TODO open video scene
+            SceneManager.LoadScene(1);
         }
 
         characterDialog[dialogIndex].enabled = true;

@@ -86,7 +86,8 @@ public class BackgroundScrolling : MonoBehaviour
             if (currentStage == 2)
             {
                 backgroundQueue.Enqueue(trolleyBackground);
-                spawner.SpawnTrolleyNPC(currentXPos);
+                foregroundObject.GetComponent<BoxCollider2D>().enabled = true;
+                //spawner.SpawnTrolleyNPC(currentXPos);
             }
 
             temp = backgroundQueue.Dequeue();
