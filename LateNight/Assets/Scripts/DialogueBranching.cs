@@ -11,6 +11,8 @@ public class DialogueBranching : MonoBehaviour
     [SerializeField] int closingDialogueThreshold;
     [SerializeField] string[] npcDialogue;
     [SerializeField] string[] playerResponses;
+    [SerializeField] Sprite _npcSprite;
+    private Image _npcPortrait;
 
     PlayerControls playerInputs;
 
@@ -54,13 +56,23 @@ public class DialogueBranching : MonoBehaviour
             interactPrompt.SetActive(false);
         }
 
+
         if (dialogueBox == null)
         {
             dialogueBox = GameObject.Find("DialogueBox");
-            dialogueText = dialogueBox.GetComponent<TextMeshProUGUI>();
+            dialogueText = dialogueBox.GetComponentInChildren<TextMeshProUGUI>();
+            GameObject.FindObjectOfType<GameController>().DialogueBox = dialogueText;
+            dialogueText.font = GameObject.FindObjectOfType<GameController>().CityFont;
             dialogueBox.SetActive(false);
         }
-        
+
+        if (_npcPortrait == null)
+        {
+            dialogueBox.SetActive(true);
+            _npcPortrait = GameObject.Find("Portrait").GetComponent<Image>();
+            dialogueBox.SetActive(false);
+        }
+
         if (leftButton == null)
         {
             leftButton = GameObject.Find("LeftButton");
@@ -89,6 +101,7 @@ public class DialogueBranching : MonoBehaviour
             interactPrompt.SetActive(false);
 
             dialogueBox.SetActive(true);
+            _npcPortrait.sprite = _npcSprite;
 
             GetResponse(-1);
         }

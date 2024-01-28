@@ -660,6 +660,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3151493644743551745, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e3ee52e642beef4493e04340c999d47, type: 2}
+    - target: {fileID: 3151493644743551745, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2828762096456549369, guid: 8e3ee52e642beef4493e04340c999d47, type: 2}
+    - target: {fileID: 3151493644992319522, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151493644992319522, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151493644992319522, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3019608
+      objectReference: {fileID: 0}
     - target: {fileID: 3151493645106872404, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -699,6 +719,18 @@ PrefabInstance:
     - target: {fileID: 3151493645194215959, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151493645613466973, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151493645613466973, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151493645613466973, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
+      propertyPath: m_Color.r
+      value: 0.30101356
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3faf2284d7cf2b4a8b33c9e602fb387, type: 3}
@@ -1060,6 +1092,9 @@ MonoBehaviour:
   - {fileID: 1416639452303281181, guid: 944bb086f705b30438041ad75d1086d3, type: 3}
   spawnPoint: {fileID: 1355341530}
   spawnonce: 0
+  CityFont: {fileID: 11400000, guid: 49278b233fccd1448a7c5e8bd998e91c, type: 2}
+  TrolleyFont: {fileID: 11400000, guid: aaadc2a3ee3fe26479134c40a85d4971, type: 2}
+  ParkFont: {fileID: 11400000, guid: b1ced8f892f447944bfebecc07ec6705, type: 2}
 --- !u!4 &851833015
 Transform:
   m_ObjectHideFlags: 0
@@ -2339,6 +2374,7 @@ MonoBehaviour:
   - hi
   - hi
   - hi
+  _npcSprite: {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
 --- !u!58 &4790976414395116365
 CircleCollider2D:
   m_ObjectHideFlags: 0
