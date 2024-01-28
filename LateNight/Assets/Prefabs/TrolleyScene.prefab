@@ -307,7 +307,7 @@ MonoBehaviour:
   - Getting ready to take a seat you notice a pool of chocolate flowing from a pot
     you recognize from your walk.
   playerResponses:
-  - 
+  - The next time I see you, I need to get your name. It's a name worth knowing.
   - 
   _npcSprite: {fileID: 0}
   isTrolleyDialogue: 1

@@ -33,6 +33,7 @@ public class DialogueBranching : MonoBehaviour
 
     int npcDialogueIndex = 0;
 
+    bool shouldShowButtons = true;
     bool canPressE = false;
     bool canInteract = false;
     bool isInteracting = false;
@@ -112,8 +113,11 @@ public class DialogueBranching : MonoBehaviour
 
             GetResponse(-1);
         }
-        else if (isInteracting && canPressE && playerInputs.Gameplay.Interact.triggered == true)
+        else if (shouldShowButtons && isInteracting && canPressE && playerInputs.Gameplay.Interact.triggered == true)
         {
+            if (isDoneTalking)
+                shouldShowButtons = false;
+
             canPressE = true;
             leftButton.SetActive(true);
             rightButton.SetActive(true);
