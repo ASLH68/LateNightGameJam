@@ -9,6 +9,9 @@ public class TrolleyScene : MonoBehaviour
     [SerializeField] Sprite[] repeatCharSprites;
     //[SerializeField] Sprite trolleyDriver;
 
+    [SerializeField] GameObject[] eIndicators;
+    int indicatorsIndex = 0;
+
     [SerializeField] DialogueBranching[] characterDialogue;
     [SerializeField] DialogueBranching trolleyDriverDialogue;
     [SerializeField] DialogueBranching[] repeatCharDialogue;
@@ -88,6 +91,8 @@ public class TrolleyScene : MonoBehaviour
         followCamScript.enabled = false;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
 
+        characterDialogue[dialogIndex].trolleyInteractPrompt = eIndicators[indicatorsIndex];
+        indicatorsIndex++;
         characterDialogue[dialogIndex].enabled = true;
         dialogIndex++;
 
@@ -105,10 +110,12 @@ public class TrolleyScene : MonoBehaviour
             if (spawner.trolleyNPCToSpawn == -1)
             {
                 trolleyDriverDialogue.enabled = true;
+                trolleyDriverDialogue.trolleyInteractPrompt = eIndicators[indicatorsIndex];
             }
             else
             {
                 repeatCharDialogue[spawner.trolleyNPCToSpawn].enabled = true;
+                repeatCharDialogue[spawner.trolleyNPCToSpawn].trolleyInteractPrompt = eIndicators[indicatorsIndex];
             }
             //SceneManager.LoadScene(1);
         }
@@ -118,6 +125,8 @@ public class TrolleyScene : MonoBehaviour
         }
         else
         {
+            characterDialogue[dialogIndex].trolleyInteractPrompt = eIndicators[indicatorsIndex];
+            indicatorsIndex++;
             characterDialogue[dialogIndex].enabled = true;
             dialogIndex++;
         }
