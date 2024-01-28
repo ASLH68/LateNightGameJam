@@ -74,10 +74,20 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void DisplayPrompt()
     {
-        _settings.SetActive(false);
         var val = _quitPromptDisplay.activeInHierarchy;
-        _quitPromptDisplay?.SetActive(!val);
-        _title.SetActive(val);
+
+        if(!val)
+        {
+            _settings?.SetActive(val);
+            _title?.SetActive(val);
+        }
+        else
+        {
+            _title.SetActive(true);
+        }
+
+
+        _quitPromptDisplay?.SetActive(!val);      
     }
 
     // Quits the application
