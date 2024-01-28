@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 8788832217783909660}
   - component: {fileID: 5146085671028684010}
   - component: {fileID: 4489475275458994313}
+  - component: {fileID: 3998856264971053832}
   m_Layer: 0
   m_Name: TrolleyScene
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 3457323204888203171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 75.6524, y: -132.60867, z: -3.053063}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3457323205539581986}
@@ -72,12 +73,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b3a9531400e502e42bf92080cefe66f7, type: 3}
   - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
   - {fileID: 21300000, guid: 4d7c54c1521e4124da9368103c0268b8, type: 3}
-  trolleyDriver: {fileID: 21300000, guid: 1e47e28fb4d3aec4ba3e57b5957d4342, type: 3}
-  characterDialog:
+  characterDialogue:
   - {fileID: 5469431370171238818}
   - {fileID: 867413283184623398}
-  trolleyDriverDialog: {fileID: 2386351146360738726}
-  repeatCharDialog:
+  trolleyDriverDialogue: {fileID: 2386351146360738726}
+  repeatCharDialogue:
   - {fileID: 2982395866882839909}
   - {fileID: 1259242848198344822}
   - {fileID: 1525031594173164390}
@@ -85,6 +85,7 @@ MonoBehaviour:
   - {fileID: 8788832217783909660}
   - {fileID: 5146085671028684010}
   - {fileID: 4489475275458994313}
+  leavingDialogue: {fileID: 3998856264971053832}
 --- !u!114 &5469431370171238818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +128,7 @@ MonoBehaviour:
     because they\u2019ve put their trust in me."
   - 'Ok, I think that''s my cue to leave. '
   - Whoof tough crowd huh?
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: ae2b36aa17a5fae4a9acc4969551584e, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &867413283184623398
 MonoBehaviour:
@@ -170,7 +171,7 @@ MonoBehaviour:
   - "I guess other people are scared about what comes next\u2026"
   - Uh yeah no problem man.
   - Thats me, Mr. Positive.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 3ec0b4c0a1b09bc47acc0688dde003c4, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &2386351146360738726
 MonoBehaviour:
@@ -216,7 +217,7 @@ MonoBehaviour:
   - " Maybe I will try something different\u2026"
   - '*Continue to say nothing*'
   - Thanks for the ride.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: c470b67ce5e4b5a4db586d227c13fb60, type: 3}
   isTrolleyDialogue: 1
 --- !u!61 &1541178543414629602
 BoxCollider2D:
@@ -264,7 +265,7 @@ MonoBehaviour:
   playerResponses:
   - I can't believe you.
   - I should have asked for a souvenir! I'm glad I was able to see you again.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 0aa44ab08bc8e3e4fa77de2dbc311afb, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &1259242848198344822
 MonoBehaviour:
@@ -287,7 +288,7 @@ MonoBehaviour:
   - I think I'm on board with your stock philosophy now.
   - Despite the ups and downs today, I think seeing you agains means that I ended
     today in the green.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 18a1f60f04885d0489ff9c0ee1bbade7, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &1525031594173164390
 MonoBehaviour:
@@ -309,7 +310,7 @@ MonoBehaviour:
   playerResponses:
   - The next time I see you, I need to get your name. It's a name worth knowing.
   - You'll need to tell me where you work. I should try some of your cooking.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 249340adc2ae08f40846c245a70492fa, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &4049881680274738717
 MonoBehaviour:
@@ -331,7 +332,7 @@ MonoBehaviour:
   playerResponses:
   - Did you finally manage to sell one? No... maybe tomorrow's the day!
   - You move around right? I wonder where I will see you next?
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: d2848869af2744c41b8b5f6c2a47ae06, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &8788832217783909660
 MonoBehaviour:
@@ -397,6 +398,27 @@ MonoBehaviour:
   - Woah man watch out. You're gonna end up taking someone out like that.
   - Oh hey again. I hope the hotel review went well.
   _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &3998856264971053832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - This is your stop.
+  playerResponses:
+  - '*Say nothing*'
+  - Good night.
+  _npcSprite: {fileID: 21300000, guid: c470b67ce5e4b5a4db586d227c13fb60, type: 3}
   isTrolleyDialogue: 1
 --- !u!1 &3457323204928320151
 GameObject:
@@ -470,7 +492,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 123185cf25fa2ce45b302f6092f1b5a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -554,7 +576,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: c695b984cd0aefb47adfe8fbe76719d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -638,7 +660,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: b3a9531400e502e42bf92080cefe66f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -722,7 +744,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 3c17cc9de66a17b46b0a84a21f52c4bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
