@@ -46,6 +46,9 @@ public class Background : MonoBehaviour
             else if (backgroundType == whatZone.park) 
             {
                 GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().ParkFont;
+                GameObject playerob = GameObject.FindWithTag("Player");
+                PlayerBehavior pb = playerob.GetComponent<PlayerBehavior>();
+                pb.switchSprite();
             }
             else if (backgroundType == whatZone.trolley)
             {

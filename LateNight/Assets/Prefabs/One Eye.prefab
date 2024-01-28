@@ -127,6 +127,8 @@ MonoBehaviour:
   - "I can\u2019t sleep, but it\u2019s not because I\u2019m passionate."
   - Whatever lady. Just keep digging through the trash I guess.
   - I cannot believe what has happened to high society.
+  _npcSprite: {fileID: 21300000, guid: 1086a490095b79b489912920622f36cd, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &8900862138867429728
 CircleCollider2D:
   m_ObjectHideFlags: 0

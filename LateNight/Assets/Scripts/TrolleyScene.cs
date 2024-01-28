@@ -10,7 +10,10 @@ public class TrolleyScene : MonoBehaviour
     [SerializeField] Sprite trolleyDriver;
 
     [SerializeField] DialogueBranching[] characterDialog;
+    [SerializeField] DialogueBranching trolleyDriverDialog;
+    [SerializeField] DialogueBranching[] repeatCharDialog;
     int dialogIndex = 0;
+    bool hasSpokenToFinalChar = false;
 
     PlayerBehavior playerControls;
     FollowingCam followCamScript;
@@ -47,12 +50,28 @@ public class TrolleyScene : MonoBehaviour
     {
         busCharacters[dialogIndex - 1].enabled = false;
 
-        if (dialogIndex >= characterDialog.Length)
+        if (dialogIndex >= characterDialog.Length && !hasSpokenToFinalChar)
         {
-            SceneManager.LoadScene(1);
-        }
+            hasSpokenToFinalChar = true;
 
-        characterDialog[dialogIndex].enabled = true;
-        dialogIndex++;
+            if (spawner.trolleyNPCToSpawn == -1)
+            {
+                trolleyDriverDialog.enabled = true;
+            }
+            else
+            {
+                repeatCharDialog[spawner.trolleyNPCToSpawn].enabled = true;
+            }
+            //SceneManager.LoadScene(1);
+        }
+        else if (hasSpokenToFinalChar)
+        {
+            SceneManager.LoadScene("EndingVideo");
+        }
+        else
+        {
+            characterDialog[dialogIndex].enabled = true;
+            dialogIndex++;
+        }
     }
 }
