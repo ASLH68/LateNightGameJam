@@ -130,6 +130,27 @@ public class DialogueBranching : MonoBehaviour
 
     }
 
+    public void ForceStart()
+    {
+        playerScript.control.Disable();
+
+        manager = ButtonManager.staticInstance;
+        manager.UpdateCurrentNPC(this);
+
+        isInteracting = true;
+
+        npcDialogueIndex = 0;
+
+        interactPrompt.SetActive(false);
+
+        dialogueBox.SetActive(true);
+
+        _npcPortrait = GameObject.Find("Portrait").GetComponent<Image>();
+        _npcPortrait.sprite = _npcSprite;
+
+        GetResponse(-1);
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !isDoneTalking)
@@ -190,15 +211,21 @@ public class DialogueBranching : MonoBehaviour
                     wasVulnerable = true;
                 }
             }
-            
 
-            if (npcDialogueIndex >= closingDialogueThreshold)
+            if (npcDialogueIndex >= closingDialogueThreshold || npcDialogueIndex >= npcDialogue.Length)
             {
                 isDoneTalking = true;
             }
         }
 
+        if (npcDialogueIndex >= npcDialogue.Length && isTrolleyDialogue)
+        {
+            trolleyScript.MoveToNextDialog();
+            return;
+        }
+ 
         dialogueText.text = npcDialogue[npcDialogueIndex];
+        
 
         DisplayOptions();
     }
