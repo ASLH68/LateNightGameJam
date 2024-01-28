@@ -13,12 +13,14 @@ public class TrolleyScene : MonoBehaviour
     int dialogIndex = 0;
 
     PlayerBehavior playerControls;
+    FollowingCam followCamScript;
     NPCSpawner spawner;
 
     private void Awake()
     {
         playerControls = FindObjectOfType<PlayerBehavior>();
         spawner = FindObjectOfType<NPCSpawner>();
+        followCamScript = FindObjectOfType<FollowingCam>();
     }
 
     public void StartTrolleyScene()
@@ -33,7 +35,9 @@ public class TrolleyScene : MonoBehaviour
         }
 
         playerControls.control.Disable();
-        Camera.main.transform.position = transform.position;
+        playerControls.gameObject.transform.position = transform.position;
+        followCamScript.enabled = false;
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
 
         characterDialog[dialogIndex].enabled = true;
         dialogIndex++;

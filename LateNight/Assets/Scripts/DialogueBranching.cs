@@ -27,6 +27,7 @@ public class DialogueBranching : MonoBehaviour
     ButtonManager manager;
     static NPCSpawner spawner;
     GameController gc;
+    TrolleyScene trolleyScript;
 
     static PlayerBehavior playerScript;
 
@@ -37,6 +38,7 @@ public class DialogueBranching : MonoBehaviour
     bool isInteracting = false;
     bool isDoneTalking = false;
     bool wasVulnerable = false;
+    [SerializeField] bool isTrolleyDialogue;
 
     private void Start()
     {
@@ -45,6 +47,10 @@ public class DialogueBranching : MonoBehaviour
         manager = ButtonManager.staticInstance;
         playerScript = FindObjectOfType<PlayerBehavior>();
         gc = FindObjectOfType<GameController>();
+        if (isTrolleyDialogue)
+        {
+            trolleyScript = FindObjectOfType<TrolleyScene>();
+        }
 
         if (spawner == null)
         {
@@ -120,7 +126,7 @@ public class DialogueBranching : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !isDoneTalking)
         {
@@ -149,7 +155,14 @@ public class DialogueBranching : MonoBehaviour
         {
             dialogueBox.SetActive(false);
 
-            playerScript.control.Enable();
+            if (isTrolleyDialogue)
+            {
+                trolleyScript.MoveToNextDialog();
+            }
+            else
+            {
+                playerScript.control.Enable();
+            }
 
             if (!wasVulnerable)
             {
