@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b3a9531400e502e42bf92080cefe66f7, type: 3}
   - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
   - {fileID: 21300000, guid: 4d7c54c1521e4124da9368103c0268b8, type: 3}
-  trolleyDriver: {fileID: 21300000, guid: 1e47e28fb4d3aec4ba3e57b5957d4342, type: 3}
+  trolleyDriver: {fileID: 21300000, guid: c470b67ce5e4b5a4db586d227c13fb60, type: 3}
   characterDialog:
   - {fileID: 5469431370171238818}
   - {fileID: 867413283184623398}
@@ -127,7 +127,7 @@ MonoBehaviour:
     because they\u2019ve put their trust in me."
   - 'Ok, I think that''s my cue to leave. '
   - Whoof tough crowd huh?
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: ae2b36aa17a5fae4a9acc4969551584e, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &867413283184623398
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   - "I guess other people are scared about what comes next\u2026"
   - Uh yeah no problem man.
   - Thats me, Mr. Positive.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 3ec0b4c0a1b09bc47acc0688dde003c4, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &2386351146360738726
 MonoBehaviour:
@@ -264,7 +264,7 @@ MonoBehaviour:
   playerResponses:
   - I can't believe you.
   - I should have asked for a souvenir! I'm glad I was able to see you again.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 0aa44ab08bc8e3e4fa77de2dbc311afb, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &1259242848198344822
 MonoBehaviour:
@@ -287,7 +287,7 @@ MonoBehaviour:
   - I think I'm on board with your stock philosophy now.
   - Despite the ups and downs today, I think seeing you agains means that I ended
     today in the green.
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 18a1f60f04885d0489ff9c0ee1bbade7, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &1525031594173164390
 MonoBehaviour:
@@ -309,7 +309,7 @@ MonoBehaviour:
   playerResponses:
   - The next time I see you, I need to get your name. It's a name worth knowing.
   - 
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 249340adc2ae08f40846c245a70492fa, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &4049881680274738717
 MonoBehaviour:
@@ -331,7 +331,7 @@ MonoBehaviour:
   playerResponses:
   - 
   - 
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: d2848869af2744c41b8b5f6c2a47ae06, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &8788832217783909660
 MonoBehaviour:
@@ -374,7 +374,7 @@ MonoBehaviour:
   playerResponses:
   - 
   - 
-  _npcSprite: {fileID: 0}
+  _npcSprite: {fileID: 21300000, guid: 0c3bb74b812fe5840bea20ce72d87535, type: 3}
   isTrolleyDialogue: 1
 --- !u!114 &4489475275458994313
 MonoBehaviour:
