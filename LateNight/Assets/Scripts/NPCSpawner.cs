@@ -9,6 +9,7 @@ public class NPCSpawner : MonoBehaviour
     [SerializeField] Transform spawnPoint;
 
     GameController gc;
+    BackgroundScrolling backgroundScript;
     //int nextPointThreshold = 1;
     int genericNPCIndex = 0;
 
@@ -21,6 +22,7 @@ public class NPCSpawner : MonoBehaviour
     private void Start()
     {
         gc = FindObjectOfType<GameController>();
+        backgroundScript = BackgroundScrolling.singletonInstance;
     }
 
     public void SpawnNewNPC(float spawnLocation)
@@ -40,6 +42,11 @@ public class NPCSpawner : MonoBehaviour
         //{
         if (genericNPCIndex < genericNPCs.Length)
         {
+            if (backgroundScript.currentStage == 1 && genericNPCIndex < 4)
+            {
+                genericNPCIndex = 4;
+            }
+
             Instantiate(genericNPCs[genericNPCIndex], spawnPoint.position, spawnPoint.rotation);
 
             genericNPCIndex++;

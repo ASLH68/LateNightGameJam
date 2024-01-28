@@ -11,7 +11,7 @@ public class BackgroundScrolling : MonoBehaviour
     Queue<Background> backgroundQueue = new Queue<Background>();
 
     // 0 = city, 1 = park, 2 = trolley
-    int currentStage = 0;
+    public int currentStage = 0;
     int[,] levelThresholds = { { 5, 2 }, { 3, 2 }, { 3, 1 } };
     int vulnerableOptions = 0;
     int peopleInteractedWith = 0;
