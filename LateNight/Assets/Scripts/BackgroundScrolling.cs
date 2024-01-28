@@ -11,8 +11,8 @@ public class BackgroundScrolling : MonoBehaviour
     Queue<Background> backgroundQueue = new Queue<Background>();
 
     // 0 = city, 1 = park, 2 = trolley
-    int currentStage = 0;
-    int[,] levelThresholds = { { 3, 1 }, { 3, 1 }, { 2, 1 } };
+    public int currentStage = 0;
+    int[,] levelThresholds = { { 5, 2 }, { 3, 2 }, { 3, 1 } };
     int vulnerableOptions = 0;
     int peopleInteractedWith = 0;
 
@@ -20,6 +20,7 @@ public class BackgroundScrolling : MonoBehaviour
     [SerializeField] List<Background> parkBackgrounds;
     [SerializeField] Background trolleyBackground;
     [SerializeField] GameObject foregroundObject;
+    [SerializeField] GameObject trolleyForegroundObject;
     [SerializeField] GameObject trolleyDoor;
 
     float currentXPos = 50f;
@@ -86,6 +87,10 @@ public class BackgroundScrolling : MonoBehaviour
             if (currentStage == 2)
             {
                 backgroundQueue.Enqueue(trolleyBackground);
+
+                trolleyForegroundObject.transform.position = new Vector2(currentXPos - (changeInX / 2), 3);
+                //foregroundObject.GetComponent<BoxCollider2D>().enabled = true;
+                //spawner.SpawnTrolleyNPC(currentXPos);
             }
 
             temp = backgroundQueue.Dequeue();
@@ -104,6 +109,8 @@ public class BackgroundScrolling : MonoBehaviour
         //GameObject gcObject = GameObject.Find("GameController");
         //GameController gc = gcObject.GetComponent<GameController>();
         //gc.spawnanother();
+
+        peopleInteractedWith++;
 
         temp.ChangeLocation(new Vector2(currentXPos, 3));
         currentXPos += changeInX;

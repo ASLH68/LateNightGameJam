@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Background : MonoBehaviour
@@ -36,6 +37,22 @@ public class Background : MonoBehaviour
             if (backgroundType != whatZone.trolley)
             {
                 backgroundManager.ScrollBackground();
+            }
+
+            if(backgroundType == whatZone.city)
+            {
+                GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().CityFont;
+            }
+            else if (backgroundType == whatZone.park) 
+            {
+                GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().ParkFont;
+                GameObject playerob = GameObject.FindWithTag("Player");
+                PlayerBehavior pb = playerob.GetComponent<PlayerBehavior>();
+                pb.switchSprite();
+            }
+            else if (backgroundType == whatZone.trolley)
+            {
+                GameObject.FindObjectOfType<GameController>().DialogueBox.font = GameObject.FindObjectOfType<GameController>().TrolleyFont;
             }
         }
     }

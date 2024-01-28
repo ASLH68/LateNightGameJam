@@ -115,6 +115,7 @@ MonoBehaviour:
   - Right 2
   - Left 3
   - Right 3
+  _npcSprite: {fileID: 21300000, guid: 309b1d5a294fd6c43ae9cf77656c1852, type: 3}
 --- !u!70 &9041464346832327742
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
