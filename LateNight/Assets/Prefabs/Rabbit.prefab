@@ -101,8 +101,8 @@ MonoBehaviour:
   vulnerableOption: 0300000005000000
   closingDialogueThreshold: 3
   npcDialogue:
-  - You notice a fast food worker smoking a large pipe and wearing a beret.
-  - I'm rather  partial to well-buttered loaf of brioche but recently I find myself
+  - You notice a pot held rabbit smoking a large pipe and wearing a beret.
+  - I'm rather partial to a well-buttered loaf of brioche but recently I find myself
     entranced by the cavalcade of flavors present in naan.
   - Well we all know that tomato soup will always be the best. But my personal favorite
     with my esteemed palette has to be steamed carrots.
@@ -121,12 +121,12 @@ MonoBehaviour:
   - "I\u2019m more of a taco guy myself."
   - "You don\u2019t sound like you should be in fast food, why are you?"
   - "I\u2019m more of a taco guy myself."
-  - " I don\u2019t know what I have to be recognized."
+  - "I don\u2019t know what I have to be recognized."
   - "It\u2019s difficult to continue onward when you don\u2019t know where you are
     looking."
   - I think I will stick to PB&Js, thank you very much.
   - Tacos can be just as much of a delicacy as any highfalutin sandwich.
-  - " I don\u2019t know what I have to be recognized."
+  - "I don\u2019t know what I have to be recognized."
   - "It\u2019s difficult to continue onward when you don\u2019t know where you are
     looking."
   - I think I will stick to PB&Js, thank you very much.

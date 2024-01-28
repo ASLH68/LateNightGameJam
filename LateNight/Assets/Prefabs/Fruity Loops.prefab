@@ -102,7 +102,7 @@ MonoBehaviour:
   closingDialogueThreshold: 3
   npcDialogue:
   - You notice a lady standing behind a fruit stand, desperately trying to get your
-    attention?
+    attention
   - Why yes! Would you like to buy any? *As she asks the question her glasses loosen
     from her face and she pushes them back into place*
   - I get them from the freshest places around! Straight from the source!
