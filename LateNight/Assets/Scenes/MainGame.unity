@@ -2343,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrolleyScene
       objectReference: {fileID: 0}
+    - target: {fileID: 6722237758816386229, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
+      propertyPath: m_Looping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef16b93752cca44790024fd81ae7de0, type: 3}
 --- !u!4 &1766312606 stripped
