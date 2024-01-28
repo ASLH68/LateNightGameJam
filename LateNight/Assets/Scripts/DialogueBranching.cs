@@ -167,14 +167,14 @@ public class DialogueBranching : MonoBehaviour
 
     private void DisplayOptions()
     {
-        if (isDoneTalking)
+        /*if (isDoneTalking)
         {
             rightButtonText.text = "Goodbye";
             rightButton.SetActive(true);
 
             return;
         }
-
+        */
         leftButtonText.text = playerResponses[npcDialogueIndex * 2];
         rightButtonText.text = playerResponses[(npcDialogueIndex * 2) + 1];
 
