@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2562147597423742236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.983017, y: -56.515186, z: 0}
-  m_LocalScale: {x: 1, y: 2.45, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.7604928, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 123185cf25fa2ce45b302f6092f1b5a7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -128,6 +128,8 @@ MonoBehaviour:
     because they\u2019ve put their trust in me."
   - 'Ok, I think that''s my cue to leave. '
   - Whoof tough crowd huh?
+  _npcSprite: {fileID: 21300000, guid: ae2b36aa17a5fae4a9acc4969551584e, type: 3}
+  isTrolleyDialogue: 0
 --- !u!58 &3308450519601200861
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,6 +143,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.2363131, y: 0}
+  m_Offset: {x: 0.754724, y: -0.55519295}
   serializedVersion: 2
-  m_Radius: 1.0046189
+  m_Radius: 3.55085
