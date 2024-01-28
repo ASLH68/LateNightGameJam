@@ -12,6 +12,12 @@ public class NPCSpawner : MonoBehaviour
     int nextPointThreshold = 1;
     int genericNPCIndex = 0;
 
+    // X value represents list (0 for vulnerable, 1 for generic), y represents index
+    Vector2 mostRecentlySpawned;
+    Vector2 secondMostRecentlySpawned;
+    Vector2 trolleyNPCToSpawn = new Vector2(2, 0);
+    [SerializeField] GameObject busDriver;
+
     private void Start()
     {
         gc = FindObjectOfType<GameController>();
@@ -32,6 +38,30 @@ public class NPCSpawner : MonoBehaviour
             Instantiate(genericNPCs[genericNPCIndex], spawnPoint.position, spawnPoint.rotation);
 
             genericNPCIndex++;
+        }
+    }
+
+    public void SpawnTrolleyNPC(float position)
+    {
+        if (trolleyNPCToSpawn.x == 0)
+        {
+            Instantiate(vulnerableNPCs[(int)trolleyNPCToSpawn.y], new Vector2(position, 0), Quaternion.identity);
+        }
+        else if (trolleyNPCToSpawn.y == 1)
+        {
+            Instantiate(genericNPCs[(int)trolleyNPCToSpawn.y], new Vector2(position, 0), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(busDriver, new Vector2(position, -1.4f), Quaternion.identity);
+        }
+    }
+
+    public void SetTrolleyNPC()
+    {
+        if (trolleyNPCToSpawn.x == 2)
+        {
+            trolleyNPCToSpawn = secondMostRecentlySpawned;
         }
     }
 }
