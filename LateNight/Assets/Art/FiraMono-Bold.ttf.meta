@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ced89b6a94d5ca64e9f3c9c5825b5d2f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fira Mono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 70127fc5163eace42bb63455f769be63, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

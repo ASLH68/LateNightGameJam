@@ -11,6 +11,8 @@ public class DialogueBranching : MonoBehaviour
     [SerializeField] int closingDialogueThreshold;
     [SerializeField] string[] npcDialogue;
     [SerializeField] string[] playerResponses;
+    [SerializeField] Sprite _npcSprite;
+    private Image _npcPortrait;
 
     PlayerControls playerInputs;
 
@@ -30,6 +32,7 @@ public class DialogueBranching : MonoBehaviour
 
     int npcDialogueIndex = 0;
 
+    bool canPressE = false;
     bool canInteract = false;
     bool isInteracting = false;
     bool isDoneTalking = false;
@@ -54,13 +57,23 @@ public class DialogueBranching : MonoBehaviour
             interactPrompt.SetActive(false);
         }
 
+
         if (dialogueBox == null)
         {
             dialogueBox = GameObject.Find("DialogueBox");
-            dialogueText = dialogueBox.GetComponent<TextMeshProUGUI>();
+            dialogueText = dialogueBox.GetComponentInChildren<TextMeshProUGUI>();
+            GameObject.FindObjectOfType<GameController>().DialogueBox = dialogueText;
+            dialogueText.font = GameObject.FindObjectOfType<GameController>().CityFont;
             dialogueBox.SetActive(false);
         }
-        
+
+        if (_npcPortrait == null)
+        {
+            dialogueBox.SetActive(true);
+            _npcPortrait = GameObject.Find("Portrait").GetComponent<Image>();
+            dialogueBox.SetActive(false);
+        }
+
         if (leftButton == null)
         {
             leftButton = GameObject.Find("LeftButton");
@@ -89,11 +102,18 @@ public class DialogueBranching : MonoBehaviour
             interactPrompt.SetActive(false);
 
             dialogueBox.SetActive(true);
+            _npcPortrait.sprite = _npcSprite;
 
             GetResponse(-1);
         }
+        else if (isInteracting && canPressE && playerInputs.Gameplay.Interact.triggered == true)
+        {
+            canPressE = true;
+            leftButton.SetActive(true);
+            rightButton.SetActive(true);
+        }
 
-        if(wasVulnerable)
+        if (wasVulnerable)
         {
             Debug.Log("Lo siento");
         }
@@ -178,7 +198,8 @@ public class DialogueBranching : MonoBehaviour
         leftButtonText.text = playerResponses[npcDialogueIndex * 2];
         rightButtonText.text = playerResponses[(npcDialogueIndex * 2) + 1];
 
-        leftButton.SetActive(true);
-        rightButton.SetActive(true);
+        canPressE = true;
+        //leftButton.SetActive(true);
+        //rightButton.SetActive(true);
     }
 }
