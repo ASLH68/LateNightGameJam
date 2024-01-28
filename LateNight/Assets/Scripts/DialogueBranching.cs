@@ -16,6 +16,8 @@ public class DialogueBranching : MonoBehaviour
 
     PlayerControls playerInputs;
 
+    public GameObject trolleyInteractPrompt;
+
     static GameObject interactPrompt;
     static TextMeshProUGUI dialogueText;
     static Text leftButtonText;
@@ -108,7 +110,14 @@ public class DialogueBranching : MonoBehaviour
 
             isInteracting = true;
 
-            interactPrompt.SetActive(false);
+            if (isTrolleyDialogue)
+            {
+                //trolleyInteractPrompt.SetActive(false);
+            }
+            else
+            {
+                interactPrompt.SetActive(false);
+            }
 
             dialogueBox.SetActive(true);
             _npcPortrait.sprite = _npcSprite;
@@ -157,8 +166,15 @@ public class DialogueBranching : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !isDoneTalking)
         {
-            interactPrompt.SetActive(true);
-            interactPrompt.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f);
+            if (isTrolleyDialogue)
+            {
+                //trolleyInteractPrompt.SetActive(true);
+            }
+            else
+            {
+                interactPrompt.SetActive(true);
+                interactPrompt.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f);
+            }
 
             canInteract = true;
         }
@@ -168,7 +184,14 @@ public class DialogueBranching : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            interactPrompt.SetActive(false);
+            if (isTrolleyDialogue)
+            {
+                //trolleyInteractPrompt.SetActive(false);
+            }
+            else
+            {
+                interactPrompt.SetActive(false);
+            }
 
             canInteract = false;
         }

@@ -9,6 +9,9 @@ public class TrolleyScene : MonoBehaviour
     [SerializeField] Sprite[] repeatCharSprites;
     //[SerializeField] Sprite trolleyDriver;
 
+    [SerializeField] GameObject[] indicators;
+    int indicatorIndex = 0;
+
     [SerializeField] DialogueBranching[] characterDialogue;
     [SerializeField] DialogueBranching trolleyDriverDialogue;
     [SerializeField] DialogueBranching[] repeatCharDialogue;
@@ -74,6 +77,18 @@ public class TrolleyScene : MonoBehaviour
     {
         inputs.Gameplay.Enable();
 
+        //characterDialogue[0].trolleyInteractPrompt = indicators[0];
+        //characterDialogue[1].trolleyInteractPrompt = indicators[1];
+        //if (spawner.trolleyNPCToSpawn == -1)
+        //{
+        //    trolleyDriverDialogue.trolleyInteractPrompt = indicators[2];
+        //}
+        //else
+        //{
+        //    repeatCharDialogue[spawner.trolleyNPCToSpawn].trolleyInteractPrompt = indicators[2];
+        //}
+
+
         if (spawner.trolleyNPCToSpawn == -1)
         {
             busCharacters[busCharacters.Length - 1].sprite = null;
@@ -88,6 +103,7 @@ public class TrolleyScene : MonoBehaviour
         followCamScript.enabled = false;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
 
+        indicators[dialogIndex].SetActive(true);
         characterDialogue[dialogIndex].enabled = true;
         dialogIndex++;
 
@@ -96,11 +112,14 @@ public class TrolleyScene : MonoBehaviour
 
     public void MoveToNextDialog()
     {
+        indicators[dialogIndex - 1].SetActive(false);
         busCharacters[dialogIndex - 1].enabled = false;
 
         if (dialogIndex >= characterDialogue.Length && !hasSpokenToFinalChar)
         {
             hasSpokenToFinalChar = true;
+
+            indicators[2].SetActive(true);
 
             if (spawner.trolleyNPCToSpawn == -1)
             {
@@ -118,6 +137,7 @@ public class TrolleyScene : MonoBehaviour
         }
         else
         {
+            indicators[dialogIndex].SetActive(true);
             characterDialogue[dialogIndex].enabled = true;
             dialogIndex++;
         }
