@@ -14,6 +14,13 @@ GameObject:
   - component: {fileID: 867413283184623398}
   - component: {fileID: 2386351146360738726}
   - component: {fileID: 1541178543414629602}
+  - component: {fileID: 2982395866882839909}
+  - component: {fileID: 1259242848198344822}
+  - component: {fileID: 1525031594173164390}
+  - component: {fileID: 4049881680274738717}
+  - component: {fileID: 8788832217783909660}
+  - component: {fileID: 5146085671028684010}
+  - component: {fileID: 4489475275458994313}
   m_Layer: 0
   m_Name: TrolleyScene
   m_TagString: Untagged
@@ -62,14 +69,22 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e47e28fb4d3aec4ba3e57b5957d4342, type: 3}
   - {fileID: 21300000, guid: d994d3456f70b644a8e96cc9bb3640a8, type: 3}
   - {fileID: 21300000, guid: 56762eb091635ea45b09ebded06bf982, type: 3}
+  - {fileID: 21300000, guid: b3a9531400e502e42bf92080cefe66f7, type: 3}
   - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
-  - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
-  - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
+  - {fileID: 21300000, guid: 4d7c54c1521e4124da9368103c0268b8, type: 3}
   trolleyDriver: {fileID: 21300000, guid: 1e47e28fb4d3aec4ba3e57b5957d4342, type: 3}
   characterDialog:
   - {fileID: 5469431370171238818}
   - {fileID: 867413283184623398}
-  - {fileID: 2386351146360738726}
+  trolleyDriverDialog: {fileID: 2386351146360738726}
+  repeatCharDialog:
+  - {fileID: 2982395866882839909}
+  - {fileID: 1259242848198344822}
+  - {fileID: 1525031594173164390}
+  - {fileID: 4049881680274738717}
+  - {fileID: 8788832217783909660}
+  - {fileID: 5146085671028684010}
+  - {fileID: 4489475275458994313}
 --- !u!114 &5469431370171238818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +231,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07424927, y: -1.7076645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -227,8 +242,162 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.251938, y: 2.4637299}
   m_EdgeRadius: 0
+--- !u!114 &2982395866882839909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - The woman from the dumpster earlier notices you and beckons you over with an
+    outstretched hand.
+  playerResponses:
+  - I can't believe you.
+  - I should have asked for a souvenir! I'm glad I was able to see you again.
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &1259242848198344822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - Wobbling down the aisle, the rather gangly child from earlier nearly falls over
+    next to you.
+  playerResponses:
+  - I think I'm on board with your stock philosophy now.
+  - Despite the ups and downs today, I think seeing you agains means that I ended
+    today in the green.
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &1525031594173164390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - Getting ready to take a seat you notice a pool of chocolate flowing from a pot
+    you recognize from your walk.
+  playerResponses:
+  - 
+  - 
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &4049881680274738717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - The smell of a hundred different fruits hits your nostrils as the colorful lady
+    from early in the evening plops down beside you.
+  playerResponses:
+  - 
+  - 
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &8788832217783909660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - 
+  playerResponses:
+  - I don't remember who you are.
+  - Okay? Do I konw you?
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &5146085671028684010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - The noise in the trolley car triples as the 3 women from earlier stumble through
+    the doors and enthusiastically greet you.
+  playerResponses:
+  - 
+  - 
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
+--- !u!114 &4489475275458994313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457323204888203171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34deecbefba872419b9c2931386a8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vulnerableOption: 
+  closingDialogueThreshold: 0
+  npcDialogue:
+  - Staring through the window you feel yourself get jostled slightly as another
+    passenger takes the seat next to you.
+  playerResponses:
+  - 
+  - 
+  _npcSprite: {fileID: 0}
+  isTrolleyDialogue: 1
 --- !u!1 &3457323204928320151
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +639,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 56762eb091635ea45b09ebded06bf982, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3a9531400e502e42bf92080cefe66f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
