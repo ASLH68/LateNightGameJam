@@ -62,6 +62,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e47e28fb4d3aec4ba3e57b5957d4342, type: 3}
   - {fileID: 21300000, guid: d994d3456f70b644a8e96cc9bb3640a8, type: 3}
   - {fileID: 21300000, guid: 56762eb091635ea45b09ebded06bf982, type: 3}
+  - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
+  - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
+  - {fileID: 21300000, guid: 3475fd408104f344c828d926844b78c1, type: 3}
   trolleyDriver: {fileID: 21300000, guid: 1e47e28fb4d3aec4ba3e57b5957d4342, type: 3}
   characterDialog:
   - {fileID: 5469431370171238818}
