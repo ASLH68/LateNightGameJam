@@ -147,11 +147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1777684361892267802, guid: 3944a04368bf80a4794999adbe635508, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34415233
+      value: -40.7
       objectReference: {fileID: 0}
     - target: {fileID: 1777684361892267802, guid: 3944a04368bf80a4794999adbe635508, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4718218
+      value: -21.4
       objectReference: {fileID: 0}
     - target: {fileID: 1777684361892267802, guid: 3944a04368bf80a4794999adbe635508, type: 3}
       propertyPath: m_LocalPosition.z
@@ -585,7 +585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.75, z: -10}
+  m_LocalPosition: {x: 22.76, y: 1.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1019,7 +1019,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584975842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.79, y: -1.49, z: 0}
+  m_LocalPosition: {x: 18.49, y: -1.39, z: 0}
   m_LocalScale: {x: 1, y: 2.0116098, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1038,6 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76267f97c131ea4f8009ab9a8393dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1189,6 @@ MonoBehaviour:
   - {fileID: 5322303687116341752, guid: d98c5c58e9edddf49b8815b65ae5a562, type: 3}
   - {fileID: 1416639452303281181, guid: 944bb086f705b30438041ad75d1086d3, type: 3}
   spawnPoint: {fileID: 1355341530}
-  spawnonce: 0
   CityFont: {fileID: 11400000, guid: 49278b233fccd1448a7c5e8bd998e91c, type: 2}
   TrolleyFont: {fileID: 11400000, guid: aaadc2a3ee3fe26479134c40a85d4971, type: 2}
   ParkFont: {fileID: 11400000, guid: b1ced8f892f447944bfebecc07ec6705, type: 2}

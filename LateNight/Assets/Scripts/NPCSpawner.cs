@@ -38,9 +38,12 @@ public class NPCSpawner : MonoBehaviour
         //}
         //else
         //{
+        if (genericNPCIndex < genericNPCs.Length)
+        {
             Instantiate(genericNPCs[genericNPCIndex], spawnPoint.position, spawnPoint.rotation);
 
             genericNPCIndex++;
+        }
         //}
     }
 

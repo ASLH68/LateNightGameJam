@@ -12,7 +12,7 @@ public class BackgroundScrolling : MonoBehaviour
 
     // 0 = city, 1 = park, 2 = trolley
     int currentStage = 0;
-    int[,] levelThresholds = { { 4, 2 }, { 3, 2 }, { 3, 1 } };
+    int[,] levelThresholds = { { 5, 2 }, { 3, 2 }, { 3, 1 } };
     int vulnerableOptions = 0;
     int peopleInteractedWith = 0;
 
@@ -109,6 +109,8 @@ public class BackgroundScrolling : MonoBehaviour
         //GameObject gcObject = GameObject.Find("GameController");
         //GameController gc = gcObject.GetComponent<GameController>();
         //gc.spawnanother();
+
+        peopleInteractedWith++;
 
         temp.ChangeLocation(new Vector2(currentXPos, 3));
         currentXPos += changeInX;
