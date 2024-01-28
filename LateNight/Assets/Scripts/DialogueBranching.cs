@@ -137,7 +137,7 @@ public class DialogueBranching : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !isDoneTalking)
         {
             interactPrompt.SetActive(true);
-            interactPrompt.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 1);
+            interactPrompt.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f);
 
             canInteract = true;
         }
