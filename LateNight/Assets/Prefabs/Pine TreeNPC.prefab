@@ -102,7 +102,7 @@ MonoBehaviour:
   vulnerableOption: 0300000005000000
   closingDialogueThreshold: 3
   npcDialogue:
-  - '*you notice a strange noise coming from a nearby tree and decide to investigate'
+  - You notice a strange noise coming from a nearby tree and decide to investigate
   - I'm a park ranger at this establishment! How can I help you?
   - No! Trees can't talk silly goose! I'm a park ranger. Can't you see my uniform?
   - First I was a mailman, then I became a firefighter, and after many years I joined

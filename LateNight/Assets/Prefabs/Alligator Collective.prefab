@@ -103,16 +103,16 @@ MonoBehaviour:
   vulnerableOption: 0300000005000000
   closingDialogueThreshold: 3
   npcDialogue:
-  - While staring out the window you notice a pair of eyes reflected by yours. Turning
-    back inside the trolley 4 pairs lock into yours.
-  - Indeed we find the cool air rather pleasant to us.
+  - While staring out the window you notice a pair of eyes reflected by the window.
+    Turning back inside the trolley four pairs lock onto yours.
+  - Indeed we find the cool air rather pleasant.
   - Alligators, you can tell because of the pointed snouts. We get that a lot.
   - "No gator is more important than the other. We couldn\u2019t accomplish half
     of our kingly ideals without every one of us. "
-  - They all look at you slowly blinking.
+  - '*They all look at you slowly blinking*'
   - "No gator is more important than the other. We couldn\u2019t accomplish half
     of our kingly ideals without every one of us. "
-  - They all look at you slowly blinking.
+  - '*They all look at you slowly blinking*'
   playerResponses:
   - Oh uh hey there fellers, nice night huh?
   - Are you a group of alligators or crocodiles?
@@ -121,12 +121,12 @@ MonoBehaviour:
   - Which is the head gator?
   - See you later Alligators.
   - "Maybe people will count on me at work, maybe I was chosen for a reason\u2026"
-  - " It does take a team to get something done, I need to put my trust in my team,
+  - "It does take a team to get something done, I need to put my trust in my team,
     because they\u2019ve put their trust in me."
   - 'Ok, I think that''s my cue to leave. '
   - Whoof tough crowd huh?
   - "Maybe people will count on me at work, maybe I was chosen for a reason\u2026"
-  - " It does take a team to get something done, I need to put my trust in my team,
+  - "It does take a team to get something done, I need to put my trust in my team,
     because they\u2019ve put their trust in me."
   - 'Ok, I think that''s my cue to leave. '
   - Whoof tough crowd huh?

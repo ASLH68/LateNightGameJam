@@ -102,15 +102,14 @@ MonoBehaviour:
   vulnerableOption: 0300000005000000
   closingDialogueThreshold: 3
   npcDialogue:
-  - '*You notice three differently aged disheveled women in suits huddled in a group
-    together, two of them seem to be supporting one in the middle.'
+  - You notice three differently aged disheveled women in suits huddled in a group
+    together, two of them seem to be supporting one in the middle
   - We just got back from a total rager! Judge here had a few too many drinks and
     can't walk straight. *Says Prosecution rubbing her nose* *Judge raises her head
     lazily* "I'm f-fine *hiccup*"
-  - '*The youngest lady perks up and rubs her nose* *The youngest lady perks up and
-    rubs her nose* "I''m Prosecution!" *The middle aged lady acknowledges you lazily*
-    "I am Defense." *The eldest lady in the middle weakly raises her head* "And I
-    a-am Judge."'
+  - '*The youngest lady perks up and rubs her nose* "I''m Prosecution!" *The middle
+    aged lady acknowledges you lazily* "I am Defense." *The eldest lady in the middle
+    weakly raises her head* "And I a-am Judge."'
   - '"And we are silly!" *Says Prosecution sniffing after her words* "How better
     to understand the lengths of the law then by testing it yourself?" *Says Judge
     through slurred words*'
