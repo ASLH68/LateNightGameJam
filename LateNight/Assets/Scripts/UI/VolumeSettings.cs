@@ -30,7 +30,7 @@ public class VolumeSettings : MonoBehaviour
     #region SFXVolume
     public void SetSFXVolume(float _value)
     {
-        if (_value < 0)
+        if (_value < 1)
         {
             _value = .001f;
         }
@@ -54,7 +54,7 @@ public class VolumeSettings : MonoBehaviour
     #region MusicVolume
     public void SetMusicVolume(float _value)
     {
-        if (_value < 0)
+        if (_value < 1)
         {
             _value = .001f;
         }

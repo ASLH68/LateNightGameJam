@@ -64,7 +64,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 682c66fab7fa82847bf580b38ba7445d
-    name: MyExposedParam
+    name: MasterVolume
   - guid: 4cbacc80fffd07f4994eee911679845e
     name: MusicVolume
   - guid: ec20d0486e826d1458cc91e55ad6919f
@@ -76,7 +76,7 @@ AudioMixerController:
     - 0dcd063de5e3dbc4fb4484aaa814568b
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 0}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
